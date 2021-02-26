@@ -1,0 +1,32 @@
+THEME : L'Histoire de SquareEnix
+
+	-> Maquette
+	-> Mise en page (HTML, CSS)
+		-> Recuperateur d'info (facebook, twitter...) -> page central
+		-> Afficher (Onglet 1) - Historique de SquareEnix
+			-> Barre chronologique (indiquant les faits historique de SquareEnix) (O---O------O....->)
+		-> Afficher (Onglet 2) - Les Grands NOMS de SquareEnix
+			-> Tableau (Musicals, Scénaristique, Artistique)
+				-> Tableau (Les Noms et leurs histoire)
+		-> Afficher (Onglet 3) - Forum de Chat 
+			-> Tableau trié selon les demandes (Histoire, jeux, livre, ...)
+		-> Afficher (Onglet 4) - Quizz
+			-> Afficher (question prédéfini - avec réponse à choix multiple)
+		-> Afficher (Onglet 5) - Boutique
+			-> Tableau (jeux, goodies, livre)
+				-> Tableau (liste d'achat)
+		-> Afficher (Onglet 6) - Recherche (avec des Filtres)
+			-> Recherche par recommandation (Recherche rapide via les préférences de l'utilisateur)
+		-> Afficher (Onglet 7) - Formulaire d'incription
+			
+
+-------------------------------------
+Vincent -> Maquette (semaine 1-2)
+	-> Formulaire d'inscription
+Tommy 	-> HTML et CSS (en attente de la Maquette)
+Alex 	-> Récuperateur d'information (facebook, ....)
+	-> Barre de recherche avec des Filtres (creer un tableau pour la recherche d'info)
+
+
+
+
