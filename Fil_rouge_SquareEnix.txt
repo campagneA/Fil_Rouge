@@ -2,22 +2,42 @@ THEME : L'Histoire de SquareEnix
 
 	-> Maquette
 	-> Mise en page (HTML, CSS)
-		-> Recuperateur d'info (facebook, twitter...) -> page central
-		-> Afficher (Onglet 1) - Historique de SquareEnix
-			-> Barre chronologique (indiquant les faits historique de SquareEnix) (O---O------O....->)
-		-> Afficher (Onglet 2) - Les Grands NOMS de SquareEnix
-			-> Tableau (Musicals, Scénaristique, Artistique)
-				-> Tableau (Les Noms et leurs histoire)
-		-> Afficher (Onglet 3) - Forum de Chat 
-			-> Tableau trié selon les demandes (Histoire, jeux, livre, ...)
-		-> Afficher (Onglet 4) - Quizz
-			-> Afficher (question prédéfini - avec réponse à choix multiple)
-		-> Afficher (Onglet 5) - Boutique
-			-> Tableau (jeux, goodies, livre)
-				-> Tableau (liste d'achat)
-		-> Afficher (Onglet 6) - Recherche (avec des Filtres)
-			-> Recherche par recommandation (Recherche rapide via les préférences de l'utilisateur)
-		-> Afficher (Onglet 7) - Formulaire d'incription
+-> Haut de 	|-> Titre (afficher sur chaque page du site) - au centre
+-> l'écran	|	-> clic sur le titre - lien d'encrage (page d'accueil)
+		|-> La barre de "recherche" (avec des Filtres)
+		|	-> recherche avec des mots clé
+		|-> "Login" au dessus de la barre de recherche
+		|	-> affiche une mini page web pour se connecter (sécurisé)
+
+
+-> au centre de	|-> Recuperateur d'info (facebook, twitter...) -> page d'accueil
+-> la page
+
+		|-> Afficher (Onglet 1) - Historique de SquareEnix
+		|	-> Barre chronologique (indiquant les faits historique de SquareEnix) (O---O------O....->)
+		|-> Afficher (Onglet 2) - Les Grands NOMS de SquareEnix
+		|	-> Tableau (Musicals, Scénaristique, Artistique)
+		|		-> Tableau (Les Noms et leurs histoire)
+		|-> Afficher (Onglet 3) - Forum de Chat 
+		|	-> Tableau trié selon les demandes (Histoire, jeux, livre, ...)
+		|-> Afficher (Onglet 4) - Quizz
+-> coté gauche	|	-> Afficher (question prédéfini - avec réponse à choix multiple)
+-> de l'ecran	|-> Afficher (Onglet 5) - Boutique
+		|	-> Tableau (jeux, goodies, livre)
+		|		-> Tableau (liste d'achat)
+		|		-> Onglet "Panier"
+		|			-> ajout des elements et calcul la somme total (javascript, tva)
+		|			-> Onglet "Payer"
+		|		-> Onglet Payer
+		|		-> Onglet devant chaque Objet - Achat Multiple (+ , nombre , -)
+		|-> Afficher (Onglet 6) - Formulaire d'incription
+		|	-> rejoint la page d'inscription (sécurisé)
+		|		-> a remplir
+		|			-> Nom, Prenom, date d'anniversaire, mail, phone (facul), code postal(facul), Mot de passe, confirmer mot de passe.
+		|				-> qui renvoie un mail de confirmation
+		|				-> renvoie a la page du "PROFIL"
+
+						
 			
 
 -------------------------------------
