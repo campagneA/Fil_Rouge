@@ -38,7 +38,9 @@ THEME : L'Histoire de SquareEnix
 		|				-> renvoie a la page du "PROFIL"
 
 						
-			..........
+		|-> user_simple
+			-> acces aux pages (Accueil, Historique, Grands Noms, Forum Chat, Quizz, Boutique, Formulaire d'inscription)
+		|-> user_admin
 
 -------------------------------------
 Vincent -> Maquette (semaine 1-2)
