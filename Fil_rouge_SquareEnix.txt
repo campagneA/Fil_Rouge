@@ -13,15 +13,22 @@ THEME : L'Histoire de SquareEnix
 -> au centre de	|-> Recuperateur d'info (facebook, twitter...) -> page d'accueil
 -> la page
 
-		|-> Afficher (Onglet 1) - Historique de SquareEnix
+		|-> Afficher (Page_1) - Historique de SquareEnix
 		|	-> Barre chronologique (indiquant les faits historique de SquareEnix) (O---O------O....->)
-		|-> Afficher (Onglet 2) - Les Grands NOMS de SquareEnix
+		|		-> Mettre des questions dans les textes.
+		|
+		|-> Afficher (Page_2) - Les Grands NOMS de SquareEnix
 		|	-> Tableau (Musicals, Scénaristique, Artistique)
 		|		-> Tableau (Les Noms et leurs histoire)
-		|-> Afficher (Onglet 3) - Forum de Chat 
+		|			-> Mettre des questions dans les textes
+		|
+		|-> Afficher (Page_3) - Quizz
+		|	-> Afficher (question prédéfini - avec réponse à choix multiple)
+		|		-> Afficher son historique des notes
+		|
+		|-> Afficher (Page_4) - Forum de Chat 
 		|	-> Tableau trié selon les demandes (Histoire, jeux, livre, ...)
-		|-> Afficher (Onglet 4) - Quizz
--> coté gauche	|	-> Afficher (question prédéfini - avec réponse à choix multiple)
+-> coté gauche	|
 -> de l'ecran	|-> Afficher (Onglet 5) - Boutique
 		|	-> Tableau (jeux, goodies, livre)
 		|		-> Tableau (liste d'achat)
@@ -30,12 +37,14 @@ THEME : L'Histoire de SquareEnix
 		|			-> Onglet "Payer"
 		|		-> Onglet Payer
 		|		-> Onglet devant chaque Objet - Achat Multiple (+ , nombre , -)
+		|
 		|-> Afficher (Onglet 6) - Formulaire d'incription
 		|	-> rejoint la page d'inscription (sécurisé)
 		|		-> a remplir
 		|			-> Nom, Prenom, date d'anniversaire, mail, phone (facul), code postal(facul), Mot de passe, confirmer mot de passe.
-		|				-> qui renvoie un mail de confirmation
+		|				-> qui envoie un mail de confirmation
 		|				-> renvoie a la page du "PROFIL"
+		|	-> rejoint la page du profil de l'utilisateur
 
 						
 		|-> user_simple
