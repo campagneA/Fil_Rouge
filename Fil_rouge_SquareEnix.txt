@@ -10,9 +10,6 @@ THEME : L'Histoire de SquareEnix
 		|	-> affiche une mini page web pour se connecter (sécurisé)
 
 
--> au centre de	|-> Recuperateur d'info (facebook, twitter...) -> page d'accueil
--> la page
-
 		|-> Afficher (Page_1) - Historique de SquareEnix
 		|	-> Barre chronologique (indiquant les faits historique de SquareEnix) (O---O------O....->)
 		|		-> Mettre des questions dans les textes.
@@ -28,7 +25,7 @@ THEME : L'Histoire de SquareEnix
 		|
 		|-> Afficher (Page_4) - Forum de Chat 
 		|	-> Tableau trié selon les demandes (Histoire, jeux, livre, ...)
--> coté gauche	|
+-> haut		|
 -> de l'ecran	|-> Afficher (Onglet 5) - Boutique
 		|	-> Tableau (jeux, goodies, livre)
 		|		-> Tableau (liste d'achat)
