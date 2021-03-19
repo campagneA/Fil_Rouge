@@ -9,3 +9,17 @@ body div {
 .back-color-white {
   background-color: white;
 }
+body .fond-de-site {
+  height: 2000px;
+  min-width: 0%;
+  background-image: url("Logo/Fond_de_site.jpg");
+  background-repeat: no-repeat;
+  background-position:top center;
+}
+@media (min-width: 60em) {
+  body .fond-de-site {
+  background-image: url("Logo/Fond_de_site_large.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  }
+}
