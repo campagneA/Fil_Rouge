@@ -36,7 +36,8 @@
                         </a>
                     </div>
                 </div>
+                
             </div>
-            <img src="../fonds_ecrans/acceuil/Fond_d'acceuil.jpg" alt="Fond d'acceuil" class="img-fluid">
+            
             
         </header>
