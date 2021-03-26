@@ -23,7 +23,7 @@ include 'header.php';
             <button type="submit" class="btn btn-primary">Connecter</button>
         </form>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item text-white" href="#">Nouveau par ici? Nouveau Compte</a>
+        <a class="dropdown-item text-white" type="button" href="Inscription.php">Nouveau par ici? Nouveau Compte</a>
         <a class="dropdown-item text-white" href="#">Mot de passe oublier?</a>
     </div>
 </div>
