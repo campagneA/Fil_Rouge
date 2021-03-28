@@ -5,12 +5,9 @@ header {
 body {
   padding: 0;
   margin: 0;
+  background-color: #8d8484;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-.clear {
-  clear: both;
 }
 
 .back-color-black {
@@ -21,18 +18,68 @@ body {
 }
 
 /****** HISTORY *****/
+.title {
+  margin-top: 2%;
+  margin-bottom: 1%;
+  margin-left: 40%;
+  font-family: "Times New Roman", Times, serif;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.divider {
+  width: 450px;
+  height: 2px;
+  background: #333;
+  margin: auto;
+}
+
+.clear {
+  clear: both;
+}
 
 .history-text {
   padding: 20px;
-  width: 30%;
+  width: 40%;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
 }
+
 .history-block {
-  border: 1px red solid;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
 }
+
+.history-pic {
+  border: 10px;
+  padding: 0;
+}
+
+.history-block img {
+  border: 5px #8d041b solid;
+  width: 100%;
+}
+
+/*block pour redimensionner les images*/
+.history-block .history-pic-top {
+  width: 45%;
+  float: right;
+}
+
+.history-block .history-pic-mid {
+  float: left;
+  width: 42%;
+}
+
+.history-block .history-pic-low {
+  width: 52%;
+  float: right;
+}
+/*block pour redimensionner les images*/
+
 .history-block.topblock {
   margin-top: 100px;
 }
@@ -42,16 +89,91 @@ body {
 .history-block .floatright {
   float: right;
 }
-.history-block img {
-  width: 100%;
-}
-.history-pic {
-  width: 60%;
-  padding: 0;
+
+@media all and (max-width: 1300px) {
+  .divider {
+    width: 450px;
+    height: 2px;
+    background: #333;
+    margin-left: 36%;
+  }
+
+  .history-block .history-pic-mid {
+    width: 40%;
+    float: left;
+  }
+
+  .history-block .history-pic-low {
+    width: 52%;
+    float: right;
+  }
+
+  .history-text {
+    padding: 20px;
+    width: 40%;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+  }
 }
 
-@media all and (max-width: 1165px) {
-}
+@media all and (max-width: 390px) {
+  .title {
+    margin-top: 2%;
+    margin-bottom: 3%;
+    margin-left: 2%;
+    font-family: "Times New Roman", Times, serif;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+  }
 
-@media all and (max-width: 360px) {
+  .divider {
+    width: 200px;
+    height: 2px;
+    background: #333;
+    margin-left: 24%;
+  }
+
+  .history-text {
+    width: auto;
+    position: relative;
+    margin-top: 180px;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  .history-block .history-pic-top {
+    width: 55%;
+    position: absolute;
+    margin-left: 19%;
+
+  }
+
+  .history-block .history-pic-mid {
+    width: 55%;
+    position:relative;
+    margin-top: 10%;
+    margin-bottom: -50%;
+    margin-left: 24%;
+  }
+
+  .history-block .history-pic-low {
+    width: 55%;
+    position: absolute;
+    margin-top: 10%;
+    margin-bottom: -50%;
+    margin-left: 19%;
+  }
+
+  .history-block.topblock {
+    margin-top: 100px;
+  }
+  .history-block .floatleft {
+    float: left;
+  }
+  .history-block .floatright {
+    float: right;
+  }
 }
+/****** HISTORY *****/
