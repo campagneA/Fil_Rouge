@@ -177,3 +177,146 @@ body {
   }
 }
 /****** HISTORY *****/
+
+
+/****** PAGE ACCEUIL (zak) ******/
+@font-face{
+  src: url(FinalFantasy-aa4m.ttf);
+  font-family: final;
+}
+
+
+.conteneur{
+  width: 100%;
+  background: #304352;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:black;
+  font-family: final;
+  -webkit-user-select: none;
+  /* background-image: url("fonds_ecrans/acceuil/pattern3.png");
+  background-size: contain; */
+}
+
+img{
+  border: 5px black solid;
+}
+#one{
+  width:100%;
+}
+.box{
+  width: 90%;
+}
+
+.box img{
+  width: 100%;
+}
+.text1{
+  width: 100%;
+  position: relative;
+  margin-top: -37%;
+  margin-bottom: 40%;
+}
+.text1 h1, .text1 p{
+  text-align: center;
+  text-transform: uppercase;
+ 
+}
+.text1 h1{
+  font-size: 7vw;
+  text-decoration: underline 0.3vw;
+  font-weight: 900;
+  transform: scaleY(1.9);
+  transform-origin: 0 0;
+  word-spacing: 4px;
+  letter-spacing: -3px;
+}
+.text1 p{
+  padding-top: 2.5%;
+  font-size: 2.5vw;
+  font-weight: 900;
+  transform: scaleY(1.8);
+  transform-origin: 0 0;
+  letter-spacing: -1px;
+   word-spacing: 10px;
+}
+@media (max-width: 800px) {
+  .text1 p{
+      padding-top: 2.5%;
+      font-size: 2.5vw;
+      font-weight: 900;
+      transform: scaleY(1.8);
+      transform-origin: 0 0;
+      letter-spacing: 1px; 
+      
+  }
+}
+#two{
+  margin-top: -10%;
+  margin-bottom: -15%;
+  
+}
+#two:hover{
+  transform: scale(1.1);
+  
+  transition: all 0.5s;
+}
+#three:hover{
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+
+.text2{
+  width: 100%;
+  position: relative;
+  margin-top: -25%;
+  margin-bottom: 30%;
+  margin-left: 5%;
+  padding-right: 60%;
+}
+.text2 h1{
+  font-size: 3vw;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.text2 p{
+  font-size: 2vw;
+  color: white;
+}
+.text2 p span{
+  background-color: rgba(0, 0, 0, 1);
+}
+.text2 h1 span{
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.text3{
+  width: 100%;
+  position: relative;
+  margin-top: -40%;
+  margin-bottom: 30%;
+  margin-left: 3%;
+  padding-right: 75%;
+}
+.text3 h1{
+  font-size: 5vw;
+  font-weight: 500;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.text3 p{
+  font-size: 2vw;
+  color: white;
+}
+.text3 p span{
+  background-color: rgba(0, 0, 0, 1);
+}
+/****** PAGE ACCEUIL ******/
