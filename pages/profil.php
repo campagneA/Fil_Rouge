@@ -1,9 +1,10 @@
 <?php
 include 'header.php';
 ?>
-<div class="position-relative">
-    <div class="position-fixed top-50 start-50 translate-middle border border-3 border-danger back-color-black text-white">
-        <form class="px-4 py-3">
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 border border-3 border-danger back-color-black text-white">
+        <form class="row col-md-12 px-4 py-3">
             <div class="mb-3">
                 <label for="exampleDropdownFormEmail1" class="form-label">Adresse mail</label>
                 <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">

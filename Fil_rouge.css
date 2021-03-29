@@ -16,6 +16,11 @@ body {
 .back-color-white {
   background-color: white;
 }
+.back-image {
+  background-image: url(LOGO-FF/crystzls.jpg);
+  background-position: center center;
+  background-size: cover;
+}
 
 /****** HISTORY *****/
 .title {
@@ -147,12 +152,11 @@ body {
     width: 55%;
     position: absolute;
     margin-left: 19%;
-
   }
 
   .history-block .history-pic-mid {
     width: 55%;
-    position:relative;
+    position: relative;
     margin-top: 10%;
     margin-bottom: -50%;
     margin-left: 24%;
