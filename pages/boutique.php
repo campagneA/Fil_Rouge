@@ -30,11 +30,10 @@ include 'header.php';
         <div class="card">
             <img src="../Logo/Fond_de_site.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <h5 class="card-title">FINAL FANTASY XVI</h5>
+                <p class="card-text">Final Fantasy XVI en vente dans votre boutique pour 69.90€ !!!</p>
+                <button type="button" class="btn btn-sm btn-danger">Ajouter au Panier</button>
+                <button type="button" class="btn btn-sm btn-danger float-end">69.90€</button>
             </div>
         </div>
         <div class="card">
@@ -42,9 +41,8 @@ include 'header.php';
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <button type="button" class="btn btn-sm btn-danger">Ajouter au Panier</button>
+                <button type="button" class="btn btn-sm btn-danger float-end">20€</button>
             </div>
         </div>
         <div class="card">
@@ -52,9 +50,8 @@ include 'header.php';
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <button type="button" class="btn btn-sm btn-danger">Ajouter au Panier</button>
+                <button type="button" class="btn btn-sm btn-danger float-end">0€</button>
             </div>
         </div>
         <div class="card-group">
@@ -63,9 +60,8 @@ include 'header.php';
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <button type="button" class="btn btn-sm btn-danger">Ajouter au Panier</button>
+                    <button type="button" class="btn btn-sm btn-danger float-end">69.90€</button>
                 </div>
             </div>
             <div class="card">
@@ -73,9 +69,8 @@ include 'header.php';
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <button type="button" class="btn btn-sm btn-danger">Ajouter au Panier</button>
+                    <button type="button" class="btn btn-sm btn-danger float-end">0€</button>
                 </div>
             </div>
             <div class="card">
@@ -83,9 +78,8 @@ include 'header.php';
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <button type="button" class="btn btn-sm btn-danger">Ajouter au Panier</button>
+                    <button type="button" class="btn btn-sm btn-danger float-end">0€</button>
                 </div>
             </div>
         </div>
