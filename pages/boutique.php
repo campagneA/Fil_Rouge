@@ -1,7 +1,8 @@
 <?php
 include 'header.php';
 ?>
-<div class="row">
+<div class="row mt-5">
+    <div class="col-12 position-nav-boutique"></div>
     <div class="col-md-3 text-center border-end border-bottom border-2 border-danger back-image text-white position-fixed" height="100%">
         <h2 class="pt-5 pb-3">Liste de la Boutique</h2>
         <div class="dropdown-divider pt-3"></div>

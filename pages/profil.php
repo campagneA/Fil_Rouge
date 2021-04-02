@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 ?>
-<div class="row">
+<div class="row mt-5">
     <div class="col-md-4"></div>
     <div class="col-md-4 border border-3 border-danger back-color-black text-white">
         <form class="row col-md-12 px-4 py-3">

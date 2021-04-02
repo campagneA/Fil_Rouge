@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="fixed-top">
         <div class="row border-bottom border-2 border-danger">
             <div class="col-9">
                 <nav class="nav">
