@@ -22,14 +22,16 @@ body {
   background-size: cover;
 }
 
-/****** HISTORY *****/
+/*----------------------------------------HISTORY-----------------------------------------------*/
 .title {
-  margin-top: 2%;
-  margin-bottom: 1%;
-  margin-left: 40%;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: underline;
   font-family: "Times New Roman", Times, serif;
-  font-size: xx-large;
+  font-size: 1.8em;
   font-weight: bold;
+  /* border-bottom: 1px black solid; */
 }
 
 .divider {
@@ -71,17 +73,21 @@ body {
 /*block pour redimensionner les images*/
 .history-block .history-pic-top {
   width: 45%;
-  float: right;
+  float: left;
 }
 
 .history-block .history-pic-mid {
   float: left;
-  width: 42%;
+  width: 45%;
+}
+
+.history-block .history-pic-mid img{
+  height: 350px;
 }
 
 .history-block .history-pic-low {
-  width: 52%;
-  float: right;
+  width: 45%;
+  float: left;
 }
 /*block pour redimensionner les images*/
 
@@ -95,7 +101,8 @@ body {
   float: right;
 }
 
-@media all and (max-width: 1300px) {
+/* HISTORY RESPONSIVE */
+/* @media all and (max-width: 1300px) {
   .divider {
     width: 450px;
     height: 2px;
@@ -110,7 +117,7 @@ body {
 
   .history-block .history-pic-low {
     width: 52%;
-    float: right;
+    float: left;
   }
 
   .history-text {
@@ -120,19 +127,9 @@ body {
     font-style: italic;
     font-weight: bold;
   }
-}
+} */
 
-@media all and (max-width: 390px) {
-  .title {
-    margin-top: 2%;
-    margin-bottom: 3%;
-    margin-left: 2%;
-    font-family: "Times New Roman", Times, serif;
-    font-size: xx-large;
-    font-weight: bold;
-    text-align: center;
-  }
-
+@media all and (max-width: 1200px) {
   .divider {
     width: 200px;
     height: 2px;
@@ -140,47 +137,56 @@ body {
     margin-left: 24%;
   }
 
-  .history-text {
-    width: auto;
-    position: relative;
-    margin-top: 180px;
+  .history-block .history-text {
+    width: 55%;
+    margin: 40px auto 0 auto;
     font-style: italic;
     font-weight: bold;
+    float: none;
   }
-
+  
   .history-block .history-pic-top {
-    width: 55%;
-    position: absolute;
-    margin-left: 19%;
+    width: 45%;
+    margin: 0 auto;
+    float: none;
   }
-
+  
+  .history-block {
+    width: 90%;
+    margin-top: 180px;
+    /* position: absolute; */
+    /* margin-left: 19%; */
+  }
+  
   .history-block .history-pic-mid {
     width: 55%;
-    position: relative;
-    margin-top: 10%;
-    margin-bottom: -50%;
-    margin-left: 24%;
+    margin: 0 auto;
+    float: none;
   }
 
   .history-block .history-pic-low {
     width: 55%;
-    position: absolute;
-    margin-top: 10%;
-    margin-bottom: -50%;
-    margin-left: 19%;
+    margin: 0 auto;
+    float: none;
   }
 
   .history-block.topblock {
     margin-top: 100px;
   }
-  .history-block .floatleft {
+  /* .history-block .floatleft {
     float: left;
   }
   .history-block .floatright {
     float: right;
   }
+<<<<<<< HEAD
 }
 /****** HISTORY *****/
+=======
+} */
+/* HISTORY RESPONSIVE(fin) */  
+/*----------------------------------------HISTORY(fin)-----------------------------------------------*/
+>>>>>>> ba83b12e38d0154c02ffe6d4be1c48aa2c22118c
 
 /****** PAGE ACCEUIL (zak) ******/
 @font-face {
@@ -326,3 +332,57 @@ img {
   background-color: rgba(0, 0, 0, 1);
 }
 /****** PAGE ACCEUIL ******/
+<<<<<<< HEAD
+=======
+
+
+
+
+/*--------------------------------------------JEUX---------------------------------------------------*/
+/* JEUX PAGINATION */
+.pagination {}
+.page-item {
+  margin-top: 100%;
+  width: 100%;
+}
+
+.page-link {
+   background-color: #000000;
+   border: 1px #8d041b solid;
+   color: #f7f7df;
+   text-align: center;
+}
+
+ /* JEUX RESPONSIVE */
+ @media all and (max-width: 390px) {
+   .pagination {
+      padding-top: 100%;
+      display: flex;
+      justify-content: center;
+      
+  }
+
+   .page-item {
+     width: 20px; 
+  }
+
+  .pagination {
+    margin-top: 100%;
+    display: flex;
+    justify-content: center; 
+  }
+
+   .page-link {
+     background-color: #000000;
+     border:#000 solid;
+     color:  #f10c33;
+     font-size: xx-small;
+     font-weight: 1;
+     display: flex;
+     justify-content: space-evenly;
+     text-decoration: underline;
+  } 
+ /* JEUX RESPONSIVE(fin) */
+/* JEUX PAGINATION(fin) */
+/*--------------------------------------------JEUX(fin)---------------------------------------------------*/
+>>>>>>> ba83b12e38d0154c02ffe6d4be1c48aa2c22118c
