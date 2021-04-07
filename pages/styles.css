@@ -1,0 +1,304 @@
+.clear { clear: both; }
+
+body {
+    background: white;
+}
+
+.container-global {
+    width: 80%; 
+    margin: 0 10% 0 10%;                     
+}
+
+@media (max-width: 425px) {
+    .container-global {
+        margin-top: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-global {
+        margin-top: 20%;
+    }
+}
+
+.img-yuna {
+    border: none;
+}
+
+.img-lulu {
+    border: none;
+}
+
+.sections {
+    width: 100%;
+}
+
+.sections img {
+    width: 100%;
+}
+
+.img-container-history {
+    width: 50%;
+    margin: 5% auto;
+}
+
+@media (max-width: 430px) {
+    .img-container-history {
+       margin: 0 auto;
+       width: 100%
+    }
+}
+
+@media (max-width: 768px) {
+    .img-container-history {
+       margin: 0 auto;
+       width: 100%
+    }
+}
+
+.section-title-history {
+    text-align: center;
+    font-size: 3em; 
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.picture-ff10 {
+    width: 100%;
+}
+
+@media (max-width: 430px) {
+    .picture-ff10 {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .picture-ff10 {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.sub-section {
+    width: 95%;
+    border: 1px rgb(156, 156, 156) solid;
+    margin: 50px auto;
+    padding: 20px 40px;
+}
+
+.img-tidus {
+    border: none;
+    width: 100%;
+    height: auto;
+}
+
+.tidus-txt {
+    margin-top: 0;
+    margin-left: 90%;
+    font-size: 3em; 
+    font-weight: bold;
+}
+
+@media (max-width: 430px) {
+    .tidus-txt {
+        font-size: 2em;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .tidus-txt {
+        font-size: 3em;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+
+.yuna-txt {
+    margin-top: 0;
+    margin-left: 90%;
+    font-size: 3em; 
+    font-weight: bold;
+}
+
+@media (max-width: 430px) {
+    .yuna-txt {
+        font-size: 2em;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .yuna-txt {
+        font-size: 2em;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.sub-section-img {
+    width: 30%;
+    float: left;
+}
+
+@media (max-width: 430px) {
+    .sub-section-img {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sub-section-img {
+        width: 80%;
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+
+.sub-section-txt {
+    width: 50%;
+    margin-top: 155px;
+    margin-left: 150px;
+    font-size: 1.5em;
+    float: left;
+}
+
+@media (max-width: 430px) {
+    .sub-section-txt {
+        float: none;
+        margin: 0 auto;
+        font-size: 1em;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sub-section-txt {
+        float: none;
+        margin: 0 auto;
+        font-size: 1em;
+        width: 100%;
+    }
+}
+
+.section-img-container {
+    width: 60%;
+    float: left;
+}
+
+.container2 {
+    margin-top: 100px;
+}
+
+.section-img-container img {
+    width: 100%;
+}
+
+.divider {
+    width: 70%;
+    margin: 150px auto;
+    border-bottom: 1px black solid;
+}
+
+.gameplay img {
+    border-radius: 30px;
+}
+
+.gameplay-txt {
+    width: 30%;
+    margin-left: 150px;
+    font-size: 1.5em;
+    float: left;
+}
+
+@media (max-width: 430px) {
+    .gameplay-txt {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .gameplay-txt {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+
+
+.section-title {
+    font-size: 3em; 
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+@media (max-width: 430px) {
+    .section-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 430px) {
+    .section-img-container {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-img-container {
+        width: 100%;
+        float: none;
+    }
+}
+
+.section-title2 {
+    font-size: 2em;
+}
+
+.section-title-quizz {
+    text-align: center;
+    font-size: 3em; 
+    font-weight: bold;
+}
+
+.img-container-quizz {
+    width: 50%;
+    margin: 5% auto;
+}
+
+@media (max-width: 430px) {
+    .img-container-quizz {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .img-container-quizz {
+        width: 100%;
+    }
+}
+
+.img-quizz {
+    width: 100%;
+}
+
+
+
+
