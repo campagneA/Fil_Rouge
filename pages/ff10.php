@@ -118,6 +118,7 @@
             </div>
 
             <div class="img-container-quizz">
+                <a href="quizz.php">
                 <img src="..\photos en tt genre\inter-ff.jpg" alt="logo-of-quizz" class="img-quizz">
             </div>
         </div>
