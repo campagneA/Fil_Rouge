@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 ?>
-<div>
+<div class="mt-5">
     <div class="title">L'HISTOIRE DE SQUARE</div>
     <!-- <div class="divider"></div> -->
     <div class="history-block topblock">

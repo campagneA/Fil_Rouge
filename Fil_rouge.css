@@ -1,5 +1,6 @@
 header {
   background-color: #000000;
+  display: inline;
 }
 
 body {
@@ -86,7 +87,7 @@ body {
   width: 45%;
 }
 
-.history-block .history-pic-mid img{
+.history-block .history-pic-mid img {
   height: 350px;
 }
 
@@ -149,20 +150,20 @@ body {
     font-weight: bold;
     float: none;
   }
-  
+
   .history-block .history-pic-top {
     width: 45%;
     margin: 0 auto;
     float: none;
   }
-  
+
   .history-block {
     width: 90%;
     margin-top: 180px;
     /* position: absolute; */
     /* margin-left: 19%; */
   }
-  
+
   .history-block .history-pic-mid {
     width: 55%;
     margin: 0 auto;
@@ -179,14 +180,14 @@ body {
     margin-top: 100px;
   }
 }
-  /* .history-block .floatleft {
+/* .history-block .floatleft {
     float: left;
   }
   .history-block .floatright {
     float: right;
   }
 } */
-/* HISTORY RESPONSIVE(fin) */  
+/* HISTORY RESPONSIVE(fin) */
 /*----------------------------------------HISTORY(fin)-----------------------------------------------*/
 /****** PAGE ACCEUIL (zak) ******/
 @font-face {
