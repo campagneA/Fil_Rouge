@@ -1,7 +1,11 @@
 <?php
 include 'header.php';
 ?>
+<<<<<<< HEAD
 <div class="mt-5">
+=======
+<div class="mainBlock">
+>>>>>>> 81c394ec9cf546657817f1ebe3b4d7a665ea70f8
     <div class="title">L'HISTOIRE DE SQUARE</div>
     <!-- <div class="divider"></div> -->
     <div class="history-block topblock">
