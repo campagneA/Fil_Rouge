@@ -13,7 +13,7 @@ include 'header.php';
         <a href="#" type="button">
             <h3>Mot de Passe oublié? Par ICI !!!</h3>
         </a>
-        <a href="#" type="button">
+        <a href="Inscription.php" type="button">
             <h3>Pas de Compte? Par ICI !!!</h3>
         </a>
     </div>
