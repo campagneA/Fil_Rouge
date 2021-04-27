@@ -6,50 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="../Fil_rouge.css">
-
+    <script src="../main.js"></script>
     <title>Square Enix France</title>
 </head>
 
 <body>
-    <header class="fixed-top">
-        <div class="row border-bottom border-2 border-danger">
-            <div class="col-9">
-                <nav class="nav">
-                    <a class="nav-link active" aria-current="page" href="acceuil.php">
-                        <img src="../logo/SquareEnix_title.jpg" alt="SquareEnix_title_and_link_home">
-                    </a>
-                    <a type="button" class="nav-link text-white" href="jeux.php">
-                        <h5>Jeux</h5>
-                    </a>
-                    <a type="button" class="nav-link text-white" href="histoire.php">
-                        <h5>Histoire</h5>
-                    </a>
-                    <a type="button" class="nav-link text-white" href="forum.php">
-                        <h5>Forum<span class="badge bg-dark">5</span></h5>
-                    </a>
-                    <a type="button" class="nav-link text-white" href="quizz.php">
-                        <h5>Quizz</h5>
-                    </a>
-                    <a type="button" class="nav-link text-white" href="boutique.php">
-                        <h5>Boutique</h5>
-                    </a>
-                </nav>
-            </div>
-            <div class="col-3">
-                <div class="btn-group float-end" role="group" aria-label="Basic example">
-                    <a type="button" class="btn back-color-black" href="research.php">
-                        <img src="../logo/Search.jpg" alt="Search">
-                    </a>
-                    <a type="button" class="btn back-color-black" href="boutique.php">
-                        <img src="../logo/Boutique.jpg" alt="Boutique">
-                    </a>
-                    <a type="button" class="btn back-color-black" href="profil.php">
-                        <img src="../logo/Member.gif" alt="Profil">
-                    </a>
-                </div>
-            </div>
 
+<header>
+    <div class="header_navbar" id="header_navbar">
+        <div class = "logo"> 
+            <a href="acceuil.php">
+                <img src="../Logo/SquareEnix_title.jpg" alt="logo_squareEnix" title="Home">
+            </a>
         </div>
+        <nav class="nav_gauche">
+        <ul>
+        <li><a href="jeux.php">Jeux</a></li>
+        <li><a href="histoire.php">histoire</a></li>
+        <li><a href="forum.php">forum</a></li>
+        <li><a href="quizz.php">quizz</a></li>
+        <li><a href="boutique.php">boutique</a></li>
+        </ul>
+        </nav>
+        <nav class="nav_droite">
+        <ul>
+        <li><a href="research.php"><img src="../logo/Search.jpg" alt="Search" title="Rechercher"></a></li>
+        <li><a href="profil.php"><img src="../logo/Member.gif" alt="Profil" title="Profil"></a></li>
+        <li><a href="panier.php"><img src="../logo/Boutique.jpg" alt="Profil" title="Panier"></a></li>
+        
+        </ul>
+        </a>
+        
+        </nav>
+        <div class="btn_toggle_nav" onclick="toggleNav()"></div>
+        <nav class ="nav_sidebar">
+            <ul>
+            <li><a href="jeux.php">Jeux</a></li>
+            <li><a href="histoire.php">histoire</a></li>
+            <li><a href="forum.php">forum</a></li>
+            <li><a href="quizz.php">quizz</a></li>
+            <li><a href="boutique.php">boutique</a></li>
+            <br>
+            <li><input type="text" placeholder="Rechercher"></li>
+            <li><a href="profil.php">profil</a></li>
+            <li><a href="panier.php">panier</a></li>
+            </ul>
+        </nav>
+     
+    </div>
+</header>
 
 
-    </header>
+
+
+
+
