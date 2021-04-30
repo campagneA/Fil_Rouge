@@ -2,80 +2,61 @@
 include 'header.php';
 include 'Nav_Boutique.php';
 ?>
-<div class="row">
-    <div class="col-3"></div>
-    <div class="col-md card-group mt-2 me-3">
-        <div class="card m-2">
-            <img src="../jeux_covers/51HlW5jBN-L._AC_.jpg" class="card-img-top img-boutique" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">FINAL FANTASY XV "ROYAL EDITION"</h5>
-                <p class="card-text">Final Fantasy XV "Royal Edition" en vente dans notre boutique pour 69.90€ !!!</p>
-                <button type="button" class="btn btn-sm btn-danger">Ajouter au Panier</button>
-                <button type="button" class="btn btn-sm btn-danger float-end">69.90€</button>
-            </div>
+<link rel="stylesheet" href="boutique.css">
+
+<div class="position-boutique">
+    <div class="img">
+        <div>
+            <img src="../jeux_covers/Final-Fantasy-X-et-X-2-HD-PS4.jpg" alt="Final Fantasy 10 et 10-2 cover">
         </div>
-        <div class="card m-2">
-            <img src="../jeux_covers/A1GoGM6suxL._AC_SX385_.jpg" class="card-img-top img-boutique" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">FINAL FANTASY XIV ONLINE</h5>
-                <p class="card-text">Final Fantasy XVI Online (A realm Reborn , HeavenSward, StrormBlood) avec un abonnement de 30 jours gratuit, en ventes dans notre boutique pour 16,90€ !!!</p>
-                <button type="button" class="btn btn-sm btn-danger">Ajouter au Panier</button>
-                <button type="button" class="btn btn-sm btn-danger float-end">16.90€</button>
-            </div>
+        <div class="desc">Final Fantasy X et X-2</div>
+        <div class="description-jeu">En ventes dans notre boutique.</div>
+        <a href=""></a>
+    </div>
+
+    <div class="img">
+        <div>
+            <img src="../jeux_covers/ff12+cover.jpg" alt="Final Fantasy 12 Cover">
         </div>
-        <div class="card m-2">
-            <img src="../jeux_covers/Final_Fantasy_XIII_cover.jpg" class="card-img-top img-boutique" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">FINAL FANTASY XIII</h5>
-                <p class="card-text">Final Fantasy XIII en ventes dans notre boutique pour 50€ !!!</p>
-                <button type="button" class="btn btn-sm btn-danger">Ajouter au Panier</button>
-                <button type="button" class="btn btn-sm btn-danger float-end">50€</button>
-            </div>
+        <div class="desc">Final Fantasy 12</div>
+        <div class="description-jeu">En ventes dans notre boutique.</div>
+
+    </div>
+
+    <div class="img">
+        <div>
+            <img src="../jeux_covers/Final_Fantasy_XIII_cover.jpg" alt="Final Fantasy 13 cover">
         </div>
-        <div class="card-group">
-            <div class="card m-2">
-                <img src="../jeux_covers/ff132.jpg" class="card-img-top img-boutique" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">FINAL FANTASY XIII-2</h5>
-                    <p class="card-text">Final Fantasy XIII-2 en ventes dans notre boutique pour 50€ !!!</p>
-                    <button type="button" class="btn btn-sm btn-danger">Ajouter au Panier</button>
-                    <button type="button" class="btn btn-sm btn-danger float-end">50€</button>
-                </div>
-            </div>
-            <div class="card m-2">
-                <img src="../jeux_covers/jaquette.jpg" class="card-img-top img-boutique" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">FINAL FANTASY XIII LIGHTNING RETURNS</h5>
-                    <p class="card-text">Final Fantasy XIII "Lightning Returns" en ventes dans notre boutique pour 50€ !!!</p>
-                    <button type="button" class="btn btn-sm btn-danger">Ajouter au Panier</button>
-                    <button type="button" class="btn btn-sm btn-danger float-end">50€</button>
-                </div>
-            </div>
-            <div class="card m-2">
-                <img src="../jeux_covers/ff12+cover.jpg" class="card-img-top img-boutique" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">FINAL FANTASY XII THE ZODIAC AGE</h5>
-                    <p class="card-text">Final Fantasy XII "The Zodiac Age" en ventes dans notre boutique pour 35€ !!!</p>
-                    <button type="button" class="btn btn-sm btn-danger">Ajouter au Panier</button>
-                    <button type="button" class="btn btn-sm btn-danger float-end">35€</button>
-                </div>
-            </div>
+        <div class="desc">Final Fantasy XIII</div>
+        <div class="description-jeu">En ventes dans notre boutique.</div>
+
+    </div>
+
+    <div class="img">
+        <div>
+            <img src="../jeux_covers/51HlW5jBN-L._AC_.jpg" alt="Final Fantasy 15 Edition Royal Cover">
         </div>
-        <nav aria-label="...">
-            <ul class="pagination">
-                <li class="page-item">
-                    <span class="page-link">Previous</span>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item" aria-current="page">
-                    <span class="page-link">2</span>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="desc">Final Fantasy XV Edition Royal</div>
+        <div class="description-jeu">En ventes dans notre boutique.</div>
+
+    </div>
+
+    <div class="img">
+        <div>
+            <img src="../jeux_covers/final-fantasy-vii-7-remake.jpg" alt="Final Fantasy 7 Remanke cover">
+        </div>
+        <div class="desc">Final Fantasy VII Remake</div>
+        <div class="description-jeu">En ventes dans notre boutique.</div>
+
+    </div>
+
+    <div class="img">
+        <div>
+            <img src="../jeux_covers/Final-Fantasy-16.jpg" alt="Final Fantasy 16 cover">
+        </div>
+        <div class="desc">Final Fantasy XIV</div>
+        <div class="description-jeu">Disponible Prochainement !!!</div>
+
     </div>
 </div>
 </body>

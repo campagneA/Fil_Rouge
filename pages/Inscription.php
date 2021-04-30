@@ -25,7 +25,7 @@ include 'header.php';
         <h5>Confirmer :</h5>
         <input type="password" name="passWordConf" placeholder="*******">
     </div>
-    <ul>
+    <ul class="position-button-inscription">
         <li><a href="check_inscription.php" type="button">Inscription</a></li>
     </ul>
     <div class="position">
