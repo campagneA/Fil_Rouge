@@ -82,3 +82,47 @@ div.description-jeu {
   color: white;
   text-align: center;
 }
+
+div.img .button-boutique-left {
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  float: left;
+  font-size: 20px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+div.img .button-boutique-right {
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  float: right;
+  font-size: 20px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+div.img button {
+  background-color: rgb(56, 56, 56);
+  color: white;
+}
+
+div.img button:hover {
+  background-color: #ffffff;
+  color: black;
+}

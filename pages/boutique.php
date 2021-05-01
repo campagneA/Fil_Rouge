@@ -11,7 +11,10 @@ include 'Nav_Boutique.php';
         </div>
         <div class="desc">Final Fantasy X et X-2</div>
         <div class="description-jeu">En ventes dans notre boutique.</div>
-        <a href=""></a>
+        <div>
+            <button class="button-boutique-left" href="#">54.90 €</button>
+            <button class="button-boutique-right" href="#">Ajout Panier</button>
+        </div>
     </div>
 
     <div class="img">
@@ -20,7 +23,10 @@ include 'Nav_Boutique.php';
         </div>
         <div class="desc">Final Fantasy 12</div>
         <div class="description-jeu">En ventes dans notre boutique.</div>
-
+        <div>
+            <button class="button-boutique-left" href="#">54.90 €</button>
+            <button class="button-boutique-right" href="#">Ajout Panier</button>
+        </div>
     </div>
 
     <div class="img">
@@ -29,7 +35,10 @@ include 'Nav_Boutique.php';
         </div>
         <div class="desc">Final Fantasy XIII</div>
         <div class="description-jeu">En ventes dans notre boutique.</div>
-
+        <div>
+            <button class="button-boutique-left" href="#">54.90 €</button>
+            <button class="button-boutique-right" href="#">Ajout Panier</button>
+        </div>
     </div>
 
     <div class="img">
@@ -38,7 +47,10 @@ include 'Nav_Boutique.php';
         </div>
         <div class="desc">Final Fantasy XV Edition Royal</div>
         <div class="description-jeu">En ventes dans notre boutique.</div>
-
+        <div>
+            <button class="button-boutique-left" href="#">54.90 €</button>
+            <button class="button-boutique-right" href="#">Ajout Panier</button>
+        </div>
     </div>
 
     <div class="img">
@@ -47,7 +59,10 @@ include 'Nav_Boutique.php';
         </div>
         <div class="desc">Final Fantasy VII Remake</div>
         <div class="description-jeu">En ventes dans notre boutique.</div>
-
+        <div>
+            <button class="button-boutique-left" href="#">54.90 €</button>
+            <button class="button-boutique-right" href="#">Ajout Panier</button>
+        </div>
     </div>
 
     <div class="img">
@@ -56,7 +71,10 @@ include 'Nav_Boutique.php';
         </div>
         <div class="desc">Final Fantasy XIV</div>
         <div class="description-jeu">Disponible Prochainement !!!</div>
-
+        <div>
+            <button class="button-boutique-left" href="#">54.90 €</button>
+            <button class="button-boutique-right" href="#">Ajout Panier</button>
+        </div>
     </div>
 </div>
 </body>
