@@ -47,30 +47,30 @@ function setActiveSlide() {
 
 //faire en sorte que la fonction s'arrete lorsque la souris est sur .slider_container
 
-// const slider = document.querySelector('.slider_container');
+const slider = document.querySelector('.slider_container');
 
-// function playSlides() {
-//     activeSlide++;
+function playSlides() {
+    activeSlide++;
 
-//     if (activeSlide > slides.length - 1) {
-//         activeSlide = 0;
-//     }
-//     setBgToAcceuil();
-//     setActiveSlide();
-//     setActiveLabel();
-//     setActiveSlideText()
-// }
-// let clear;
+    if (activeSlide > slides.length - 1) {
+        activeSlide = 0;
+    }
+    setBgToAcceuil();
+    setActiveSlide();
+    setActiveLabel();
+    setActiveSlideText()
+}
+let clear;
 
-// slider.addEventListener("mouseout", event => {
-//     // console.log("Mouse out");
-//     clear = setInterval(playSlides, 6000);
-//     // console.log(clear);
-// });
-// slider.addEventListener("mouseover", event => {
-//     // console.log("Mouse in");
-//     clearInterval(clear);
-// });
+slider.addEventListener("mouseout", event => {
+    // console.log("Mouse out");
+    clear = setInterval(playSlides, 8000);
+    // console.log(clear);
+});
+slider.addEventListener("mouseover", event => {
+    // console.log("Mouse in");
+    clearInterval(clear);
+});
 
 // matcher le label et la slide; activeSlide commence à 0
 
