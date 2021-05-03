@@ -63,7 +63,7 @@
                         Yuna   
                     </div>
                     <div class=sub-section-img>
-                        <img src="..\photos en tt genre\yuna2.png" alt="Yuna" class="img-yuna" />
+                        <img src="..\photos en tt genre\yuna.png" alt="Yuna" class="img-yuna" />
                     </div>
                     <div class="sub-section-txt">
                         <p>Lorem ipsum est simplement du faux texte employé dans la composition et la mise en page avant

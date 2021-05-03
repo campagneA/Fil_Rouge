@@ -36,75 +36,86 @@
     </div>
 
     <div class="items item5">
+    <a class="location-title" href="#">FINAL FANTASY I</a>
         <div class="container-img5">
-            <img src="..\photos en tt genre\ff4.jpg" class="img5">
+            <img src="..\photos en tt genre\ff1.jpg" class="img5">
         </div>
     </div>
 
     <div class="items item6">
+    <a class="location-title" href="#">FINAL FANTASY XV</a>
         <div class="container-img6">
             <img src="..\photos en tt genre\ff15.jpg" class="img6">
         </div>
     </div>
 
     <div class="items item7">
+    <a class="location-title" href="#">FINAL FANTASY XIII</a>
         <div class="container-img7">
             <img src="..\photos en tt genre\ff13.jpg" class="img7">
         </div>
     </div>
 
     <div class="items item8">
-        <a class="location-title" href="#">FINAL FANTASY ?</a>
+        <a class="location-title" href="#">FINAL FANTASY III</a>
         <div class="container-img8">
-            <img src="" class="img8">
+            <img src="..\photos en tt genre\ff3.jpg" class="img8">
         </div>
     </div>
 
     <div class="items item9">
+    <a class="location-title" href="#">FINAL FANTASY V</a>
         <div class="container-img5">
-            <img src="../photos en tt genre/ff.jpg" class="img5">
+            <img src="../photos en tt genre/ff5-2.jpg" class="img5">
         </div>
     </div>
 
     <div class="items item10">
+    <a class="location-title" href="#">FINAL FANTASY VI</a>
         <div class="container-img5">
-            <img src="../photos en tt genre/ff.jpg" class="img5">
+            <img src="../photos en tt genre/ff6-2.jpg" class="img5">
         </div>
     </div>
 
     <div class="items item11">
+    <a class="location-title" href="#">FINAL FANTASY IV</a>
         <div class="container-img5">
-            <img src="../photos en tt genre/ff.jpg" class="img5">
+            <img src="../photos en tt genre/ff4.jpg" class="img5">
         </div>
     </div>
 
     <div class="items item12">
+    <a class="location-title" href="#">FINAL FANTASY XVI</a>
         <div class="container-img12">
             <img src="../photos en tt genre/ff16.jpg" class="img12">
         </div>
     </div>
 
     <div class="items item13">
+    <a class="location-title" href="#">FINAL FANTASY VIII</a>
         <div class="container-img5">
-            <img src="../photos en tt genre/ff.jpg" class="img5">
+            <img src="../photos en tt genre/ff8-2.jpg" class="img5">
         </div>
     </div>
 
     <div class="items item14">
+    <a class="location-title" href="#">FINAL FANTASY IX</a>
         <div class="container-img5">
-            <img src="../photos en tt genre/ff.jpg" class="img5">
+            <img src="../photos en tt genre/ff9-2.jpg" class="img5">
         </div>
     </div>
 
     <div class="items item15">
+    <a class="location-title" href="#">FINAL FANTASY XI</a>
         <div class="container-img5">
-            <img src="../photos en tt genre/ff.jpg" class="img5">
+            <img src="../photos en tt genre/ff11.jpg" class="img5">
         </div>
     </div>
 
     <div class="items item16">
+    <a class="location-title" href="#">FINAL FANTASY XIV</a>
         <div class="container-img5">
-            <img src="../photos en tt genre/ff.jpg" class="img5">
+            <img src="../photos en tt genre/ff14.jpg" class="img5">
         </div>
 </div>
 </div>
