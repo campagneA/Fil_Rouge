@@ -202,16 +202,15 @@ body {
   margin: -2.7%;
 }
 
-.title {
+/* .title {
   width: 50%;
-  margin: 5% auto;
   text-align: center;
   text-decoration: underline;
   font-family: "Times New Roman", Times, serif;
   font-size: 1.8em;
   font-weight: bold;
-  /* border-bottom: 1px black solid; */
-}
+  /* border-bottom: 1px black solid;
+}*/
 
 .divider {
   width: 450px;
@@ -225,6 +224,7 @@ body {
 }
 
 .history-text {
+  margin-top: 2.5%;
   padding: 20px;
   width: 40%;
   text-align: center;
@@ -253,11 +253,13 @@ body {
 
 /*block pour redimensionner les images*/
 .history-block .history-pic-top {
+  margin-top: 2%;
   width: 45%;
   float: left;
 }
 
 .history-block .history-pic-mid {
+  margin-top: 2%;
   float: left;
   width: 45%;
 }
@@ -267,10 +269,11 @@ body {
 }
 
 .history-block .history-pic-low {
+  margin-top: 2%;
   width: 45%;
   float: left;
 }
-/*block pour redimensionner les images*/
+/*block pour redimensionner les images*(FIN)*/
 
 .history-block.topblock {
   margin-top: 100px;
@@ -282,33 +285,6 @@ body {
   float: right;
 }
 
-/* HISTORY RESPONSIVE */
-/* @media all and (max-width: 1300px) {
-  .divider {
-    width: 450px;
-    height: 2px;
-    background: #333;
-    margin-left: 36%;
-  }
-
-  .history-block .history-pic-mid {
-    width: 40%;
-    float: left;
-  }
-
-  .history-block .history-pic-low {
-    width: 52%;
-    float: left;
-  }
-
-  .history-text {
-    padding: 20px;
-    width: 40%;
-    text-align: center;
-    font-style: italic;
-    font-weight: bold;
-  }
-} */
 
 @media all and (max-width: 1200px) {
   .mainBlock {
@@ -316,7 +292,7 @@ body {
     margin: -15%;
   }
 
-  .title {
+  /* .title {
     width: 50%;
     margin: 15% auto;
     text-align: center;
@@ -324,8 +300,8 @@ body {
     font-family: "Times New Roman", Times, serif;
     font-size: 1.8em;
     font-weight: bold;
-    /* border-bottom: 1px black solid; */
-  }
+    /* border-bottom: 1px black solid; 
+  } */
 
   .divider {
     width: 200px;
@@ -344,7 +320,7 @@ body {
 
   .history-block .history-pic-top {
     width: 45%;
-    margin: 0 auto;
+    margin: 24% auto;
     float: none;
   }
 
@@ -357,13 +333,13 @@ body {
 
   .history-block .history-pic-mid {
     width: 55%;
-    margin: 0 auto;
+    margin: 10% auto;
     float: none;
   }
 
   .history-block .history-pic-low {
     width: 55%;
-    margin: 0 auto;
+    margin: 10% auto;
     float: none;
   }
 
@@ -1090,9 +1066,14 @@ footer .footer_links ul li a:hover{
 
 
 /*--------------------------------------------FORUM---------------------------------------------------*/
+
+.backG-color {
+  background-color: rgb(100, 97, 97);
+}
+
 #forum-title {
     width: 50%;
-    margin: 5% auto;
+    margin: 3.9% auto;
     text-align: center;
     text-decoration: underline;
     font-family: "Times New Roman", Times, serif;
