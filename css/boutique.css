@@ -2,9 +2,9 @@
 .nav-boutique {
   background: linear-gradient(
     to bottom right,
-    rgb(58, 58, 58) 25%,
-    rgb(0, 0, 0),
-    rgb(58, 58, 58) 75%
+    rgb(0, 0, 0) 25%,
+    rgb(58, 58, 58),
+    rgb(0, 0, 0) 75%
   );
   position: fixed;
   top: 6%;
@@ -55,6 +55,7 @@ h1 {
 }
 
 div.img {
+  position: relative;
   margin: 5px;
   border: 1px solid #ccc;
   float: left;
@@ -83,8 +84,17 @@ div.description-jeu {
   text-align: center;
 }
 
+.position-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 div.img .button-boutique-left {
-  border: none;
+  border: 2px solid rgba(22, 22, 22, 0.685);
   border-radius: 4px;
   font-weight: bold;
   color: white;
@@ -94,14 +104,13 @@ div.img .button-boutique-left {
   display: block;
   float: left;
   font-size: 20px;
-  margin: 4px 2px;
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
   cursor: pointer;
 }
 
 div.img .button-boutique-right {
-  border: none;
+  border: 2px solid rgba(22, 22, 22, 0.685);
   border-radius: 4px;
   font-weight: bold;
   color: white;
@@ -111,7 +120,6 @@ div.img .button-boutique-right {
   display: block;
   float: right;
   font-size: 20px;
-  margin: 4px 2px;
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
   cursor: pointer;
@@ -123,6 +131,7 @@ div.img button {
 }
 
 div.img button:hover {
+  border: unset;
   background-color: #ffffff;
   color: black;
 }
