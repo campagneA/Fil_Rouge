@@ -7,7 +7,7 @@ header();
 <body>
     <?php
     barNavigation();
-    pageAccueil();
+    pageHistoire();
     ?>
 </body>
 

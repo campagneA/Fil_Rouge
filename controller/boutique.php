@@ -1,17 +1,20 @@
 <?php
 session_start();
-include_once(__DIR__ . "/../view/allView.php");
-include_once(__DIR__ . "/../view/boutiqueView.php");
+include_once(__DIR__ . "/../view/all.php");
+include_once(__DIR__ . "/../view/boutique.php");
 
 header();
 
-navBoutique();
 ?>
 
 <body>
+    <?php
+    barNavigation()
+    ?>
 
     <link rel="stylesheet" href="boutique.css">
     <?php
+    navBoutique();
     listeBoutique();
     ?>
 

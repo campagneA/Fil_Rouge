@@ -1,0 +1,127 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+}
+
+.container-global {
+  width: 70%;
+  height: auto;
+  margin: 3% auto auto auto;
+  background: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+  .container-global {
+    width: 85%;
+    height: auto;
+    margin: 3% auto auto auto;
+    background: rgb(255, 255, 255);
+  }
+}
+
+@media (max-width: 425px) {
+  .container-global {
+    width: 95%;
+    height: auto;
+    margin: 3% auto auto auto;
+    background: rgb(255, 255, 255);
+  }
+}
+
+.container-quizz {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container-quizz {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-quizz {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+h3 {
+  margin-top: 5%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h3 {
+    margin-top: 20%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  h3 {
+    margin-top: 45%;
+    text-align: center;
+  }
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 3px;
+  padding: 30px 0;
+}
+
+.question-quizz {
+  background: rgb(255, 0, 0);
+}
+
+.quizz {
+  padding: 15px 25px 15px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 10px 5px rgb(0, 0, 0, 0.5);
+  background: rgb(255, 255, 255);
+}
+
+.quizz input[type="radio"] {
+  transform: scale(1.8);
+  margin: 10px;
+}
+
+.resultats {
+  padding: 25px;
+  margin: 10px 0px 70px;
+  border-radius: 5px;
+  box-shadow: 0 10px 5px rgb(0, 0, 0, 0.5);
+}
+
+.resultats h2 {
+  text-align: center;
+}
+
+form button {
+  border: none;
+  outline: none;
+  border: 1px solid #333;
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto;
+  padding: 20px 40px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+form button:hover {
+  background: rgb(218, 245, 255);
+}
