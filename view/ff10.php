@@ -1,15 +1,13 @@
 <?php
-    include 'header.php';
+function pageFF10()
+{
 ?>
-
-<link rel="stylesheet" href="styles.css"> 
-
     <div class="container-global">
 
 
-        <div class=container-history> 
+        <div class=container-history>
 
-            <div class="section-title-history"> 
+            <div class="section-title-history">
                 This is my story
             </div>
 
@@ -31,16 +29,18 @@
         </div>
 
 
-        <div class="sections">                          <!--  SECTION 1 -->
+        <div class="sections">
+            <!--  SECTION 1 -->
             <div class="section-title">PERSONNAGES PRINCIPAUX</div>
 
             <div class="container2">
-                <div class="sub-section">               <!-- Tidus -->
+                <div class="sub-section">
+                    <!-- Tidus -->
                     <div class="tidus-txt">
-                        Tidus   
+                        Tidus
                     </div>
-                    <div class=sub-section-img> 
-                        <img src="..\photos en tt genre\tidus2.png" alt="Tidus" class= "img-tidus" />
+                    <div class=sub-section-img>
+                        <img src="..\photos en tt genre\tidus2.png" alt="Tidus" class="img-tidus" />
                     </div>
                     <div class="sub-section-txt">
                         <p>Lorem ipsum est simplement du faux texte employé dans la composition et la mise en page avant
@@ -56,11 +56,12 @@
                     </div>
                     <div class="clear"></div>
                 </div>
-            
 
-                <div class="sub-section">                   <!-- Yuna -->
-                <div class="yuna-txt">
-                        Yuna   
+
+                <div class="sub-section">
+                    <!-- Yuna -->
+                    <div class="yuna-txt">
+                        Yuna
                     </div>
                     <div class=sub-section-img>
                         <img src="..\photos en tt genre\yuna.png" alt="Yuna" class="img-yuna" />
@@ -85,10 +86,11 @@
 
         <div class="divider"></div>
 
-        <div class="sections gameplay">                          <!--  SECTION 2 -->
+        <div class="sections gameplay">
+            <!--  SECTION 2 -->
             <div class="section-title">GAMEPLAY</div>
             <div class="section-title2">Dans la continuité du tour par tour !</div>
-            
+
             <div class="container2">
                 <div class="section-img-container">
                     <img src="..\photos en tt genre\ffx-overdrive.jpg" class="img-lulu" />
@@ -119,13 +121,10 @@
 
             <div class="img-container-quizz">
                 <a href="quizz.php">
-                <img src="..\photos en tt genre\inter-ff.jpg" alt="logo-of-quizz" class="img-quizz">
+                    <img src="..\photos en tt genre\inter-ff.jpg" alt="logo-of-quizz" class="img-quizz">
             </div>
         </div>
     </div>
-
-
-
-</body>
-
-</html>
+<?php
+}
+?>

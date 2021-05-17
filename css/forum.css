@@ -1,0 +1,21 @@
+/*--------------------------------------------FORUM---------------------------------------------------*/
+
+.backG-color {
+  background-color: rgb(100, 97, 97);
+}
+
+#forum-title {
+  width: 50%;
+  margin: 3.9% auto;
+  text-align: center;
+  text-decoration: underline;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  /* border-bottom: 1px black solid; */
+}
+
+.center-buttons {
+  margin: auto 45%;
+}
+/*--------------------------------------------FORUM(fin)---------------------------------------------------*/
