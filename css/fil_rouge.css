@@ -191,8 +191,9 @@ body {
 
 /*----------------------------------------HISTORY-----------------------------------------------*/
 .mainBlock {
+  padding-top: 130px;
+  padding-bottom: 0.1px;
   background-color: #8d8484;
-  margin: -2.7%;
 }
 
 /* .title {
@@ -216,73 +217,59 @@ body {
   clear: both;
 }
 
-.history-text {
-  margin-top: 2.5%;
-  padding: 20px;
-  width: 40%;
-  text-align: center;
-  font-style: italic;
-  font-weight: bold;
-}
-
 .history-block {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
+  border-radius: 0 4px 4px 0;
 }
 
 .history-pic {
+  width: 640px;
   border: 10px;
   padding: 0;
+  float: left;
+}
+
+.history-text {
+  width: 712px;
+  height: 360px;
+  margin-left: 15px;
+  padding: 40px;
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: bold;
+  background-color: #bdc9d3;
+  border-radius: 3px;
+  float: left;
 }
 
 .history-block img {
+  width: 640px; 
+  height: 360px;
   border-width: 1px 3px 3px 1px;
   border-color: #7e535a;
   border-style: solid;
-  width: 100%;
 }
 
-/*block pour redimensionner les images*/
-.history-block .history-pic-top {
-  margin-top: 2%;
-  width: 45%;
-  float: left;
-}
+@media all and (max-width: 1530px) {
 
-.history-block .history-pic-mid {
-  margin-top: 2%;
-  float: left;
-  width: 45%;
-}
-
-.history-block .history-pic-mid img {
-  height: 350px;
-}
-
-.history-block .history-pic-low {
-  margin-top: 2%;
-  width: 45%;
-  float: left;
-}
-/*block pour redimensionner les images*(FIN)*/
-
-.history-block.topblock {
-  margin-top: 100px;
-}
-.history-block .floatleft {
-  float: left;
-}
-.history-block .floatright {
-  float: right;
-}
-
-@media all and (max-width: 1200px) {
-  .mainBlock {
-    background-color: #8d8484;
-    margin: -15%;
+  .history-block {
+    margin-top: 80px;
   }
+
+  .history-pic {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .history-text {
+    width: 640px;
+    float: none;
+    margin: 0 auto;
+  }
+
 
   /* .title {
     width: 50%;
@@ -295,7 +282,7 @@ body {
     /* border-bottom: 1px black solid; 
   } */
 
-  .divider {
+  /* .divider {
     width: 200px;
     height: 2px;
     background: #333;
@@ -319,8 +306,8 @@ body {
   .history-block {
     width: 90%;
     margin-top: 180px;
-    /* position: absolute; */
-    /* margin-left: 19%; */
+    position: absolute; 
+    margin-left: 19%; 
   }
 
   .history-block .history-pic-mid {
@@ -338,6 +325,7 @@ body {
   .history-block.topblock {
     margin-top: 100px;
   }
+} */
 }
 /* .history-block .floatleft {
     float: left;

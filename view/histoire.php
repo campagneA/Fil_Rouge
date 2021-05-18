@@ -6,10 +6,10 @@ function pageHistoire()
         <!-- <div class="title">L'HISTOIRE DE SQUARE</div> -->
         <!-- <div class="divider"></div> -->
         <div class="history-block topblock">
-            <div class="history-pic-top">
+            <div class="history-pic">
                 <img src="../photos en tt genre/square_20enix_20edition_20livres_20etats_20unis-88d77256-7b83-4863-bc67-5c77d3560718.jpg" alt="image histoire">
             </div>
-            <div class="history-text floatright">
+            <div class="history-text">
                 Lorem Ipsum is simply dummy text of
                 the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s<br>, when an unknown printer took a galley of type and scrambled
@@ -29,11 +29,11 @@ function pageHistoire()
 
 
         <div class="history-block">
-            <div class="history-pic-mid">
+            <div class="history-pic">
                 <img src="../photos en tt genre/565191-amano-yoshitaka-bartz-klauser-faris-scherwiz-final-fantasy-final-fantasy-v-lenna-charlotte-tycoon-sword-748x1030.jpg" alt="image histoire">
             </div>
 
-            <div class="history-text floatright">
+            <div class="history-text">
                 Lorem Ipsum is simply dummy text of
                 the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s<br>, when an unknown printer took a galley of type and scrambled
@@ -58,7 +58,7 @@ function pageHistoire()
                 <img src="../photos en tt genre/final_fantasy_x_spira_90.jpg" alt="image histoire">
             </div>
 
-            <div class="history-text floatright">
+            <div class="history-text">
                 Lorem Ipsum is simply dummy text of
                 the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s<br>, when an unknown printer took a galley of type and scrambled
