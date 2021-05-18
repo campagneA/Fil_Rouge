@@ -2,21 +2,22 @@
 session_start();
 include_once(__DIR__ . "/../view/all.php");
 include_once(__DIR__ . "/../view/connexion.php");
+include_once(__DIR__ . "/../view/showHeader.php");
+showHeader();
 
-header();
 ?>
 
 <body>
 
-    <link rel="stylesheet" href="../css/profil.css">
-    <?php
-    barNavigation();
-    if ($_SESSION) {
-        // Si connecté, afficheProfil()
-    } else {
-        pageConnexion();
-    }
-    ?>
+  <link rel="stylesheet" href="../css/profil.css">
+  <?php
+
+  if ($_SESSION) {
+    // Si connecté, afficheProfil()
+  } else {
+    pageConnexion();
+  }
+  ?>
 </body>
 
 </html>

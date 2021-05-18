@@ -1,15 +1,8 @@
 <?php
-include_once(__DIR__ . "/../view/all.php");
-include_once(__DIR__ . "/../view/acceuil.php");
+include_once(__DIR__ . "/../view/showHeader.php");
+include_once(__DIR__ . "/../view/showAccueil.php");
+include_once(__DIR__ . "/../view/showFooter.php");
 
-header();
-?>
-
-<body>
-    <?php
-    barNavigation();
-    pageAccueil();
-    ?>
-</body>
-
-</html>
+showHeader();
+showAccueil();
+showFooter();

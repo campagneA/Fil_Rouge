@@ -1004,3 +1004,47 @@ footer .footer_links ul li a:hover {
 /* JEUX RESPONSIVE(fin) */
 /* JEUX PAGINATION(fin) */
 /*--------------------------------------------JEUX(fin)---------------------------------------------------*/
+
+/*************************************** Page Profil*/
+
+.page_profil{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+.page_profil .profil_form_div form{
+ 
+}
+.page_profil .profil_form_div form fieldset{
+  background-color: black;
+  border: black 1px solid;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+
+}
+.page_profil .profil_form_div form fieldset input{
+  background-color: lightgray;
+}
+.page_profil .profil_form_div form fieldset label{
+  font-size: 14px;
+  margin-left: 10px;
+}
+.page_profil .profil_form_div form fieldset #adresse{
+  display: flex;
+  flex-direction: column;
+}
+.page_profil .profil_form_div form fieldset #adresse input{
+ align-self: flex-end;
+ justify-self: flex-end;
+}
+.page_profil .profil_form_div form fieldset #adresse label{
+  font-size: 12px;
+}
