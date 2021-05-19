@@ -33,10 +33,7 @@ function showFooter()
     </div>
   </footer>
   </div>
-  <script src="../acceuil.js"></script>
-  </body>
 
-  </html>
 
 <?php
 }
