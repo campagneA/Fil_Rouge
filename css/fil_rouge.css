@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
 }
 
 .back-color-black {
@@ -118,6 +119,7 @@ body {
   background-color: #000;
   z-index: 1000;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 .btn_toggle_nav {
   display: none;
@@ -1020,9 +1022,9 @@ footer .footer_links ul li a:hover {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  /* overflow: hidden; */
   background-color: steelblue;
   color: #fff;
+  overflow: hidden;
 }
 .cont_profil{
   background-color: rgba(0, 0, 0, 0.4);
