@@ -1,6 +1,7 @@
 <?php
 include_once(__DIR__ . '/showNav.php');
 include_once(__DIR__ . '/showHeader.php');
+include_once(__DIR__ . '/showFooter.php');
 function showAccueil()
 {
 ?>

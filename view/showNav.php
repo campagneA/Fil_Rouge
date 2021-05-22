@@ -22,7 +22,7 @@ function showNav()
         <ul>
           <li><a href="research.php"><img src="../logo/Search.jpg" alt="Search" title="Rechercher"></a></li>
           <li><a href="profil.php"><img src="../logo/Member.gif" alt="Profil" title="Profil"></a></li>
-          <li><a href="panier.php"><img src="../logo/Boutique.jpg" alt="Profil" title="Panier"></a></li>
+          <li><a href="panier.php"><img src="../logo/Boutique.jpg" alt="panier" title="Panier"></a></li>
 
         </ul>
         </a>

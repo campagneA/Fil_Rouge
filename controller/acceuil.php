@@ -1,8 +1,7 @@
 <?php
-include_once(__DIR__ . "/../view/showAccueil.php");
-include_once(__DIR__ . "/../view/showFooter.php");
 
-// showHeader();
+include_once(__DIR__ . "/../view/showAccueil.php");
+
 try {
   showAccueil();
 } catch (Exception $e) {
