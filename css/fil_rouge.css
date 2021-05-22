@@ -1006,7 +1006,10 @@ footer .footer_links ul li a:hover {
 /*--------------------------------------------JEUX(fin)---------------------------------------------------*/
 
 /*************************************** Page Profil*/
-
+@font-face {
+  src: url(../polices/Mulish-VariableFont_wght.ttf);
+  font-family: Muli;
+}
 .page_profil{
   box-sizing: border-box;
   display: flex;
@@ -1015,37 +1018,121 @@ footer .footer_links ul li a:hover {
   justify-content: center;
   margin: 0;
   height: 100vh;
+  width: 100vw;
   /* overflow: hidden; */
-}
-.page_profil .profil_form_div form fieldset{
-  background-color: black;
-  border: black 1px solid;
-  display: flex;
-  flex-direction: column;
+  background-color: steelblue;
   color: #fff;
-  border-radius: 10px;
-  padding: 10px 20px;
+}
+.cont_profil{
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 90%;
+  width: 70vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+  font-family: Muli;
+  border-radius: 15px;
+}
 
+#nav_profil ul{
+  grid-column: 1/2;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 2fr 2fr 1fr;
 }
-.page_profil .profil_form_div form fieldset input{
-  background-color: lightgray;
+#nav_profil ul li{
+list-style: none;
+display: flex;
+justify-content: center;
+cursor: pointer;
 }
-.page_profil .profil_form_div form fieldset label{
-  font-size: 14px;
-  margin-left: 10px;
+#nav_profil ul li:hover{
+  
+ background-color: rgb(70, 121, 180);
 }
-.page_profil .profil_form_div form fieldset #adresse{
+#nav_profil ul li img{
+  width: 2vw;
+}
+#profil_useri{
+  grid-row: 2/3;
+}
+#profil_moneyi{
+  grid-row: 3/4;
+}
+#profil_msgi{
+  grid-row: 4/5;
+}
+#profil_parami{
+  grid-row: 5/6;
+}
+.profil_user_infos{
+  display: none;
+}
+.profil_user_infos.active{
+  grid-column: 2/3;
   display: flex;
-  flex-direction: column;
+ }
+ .profil_user_infos.active div{
+   height: 90%;
+   width: 80%;
+   margin: 0 auto;
+   align-self: center;
+   justify-self: flex-end;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   text-transform: capitalize;
+ }
+ .profil_user_infos.active div fieldset{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border: 0;
+ }
+ .profil_user_infos.active div fieldset div{
+   max-height: 150px;
+   margin: 15px;
+ }
+ .profil_user_infos.active div fieldset div:last-child{
+  padding-bottom: 5.6px;
 }
-.page_profil .profil_form_div form fieldset #adresse input{
- align-self: flex-end;
- justify-self: flex-end;
+ .profil_user_infos.active input{
+   background-color: transparent;
+   border: 0;
+   border-bottom: 2px white solid;
+   padding: 15px 0;
+   font-size: 18px;
+   color: #fff;
+ }
+ .profil_user_infos input:focus,
+ .profil_user_infos input:valid{
+  outline: 0;
+ }
+ .profil_money_infos{
+   display: none;
+ }
+ .profil_money_infos.active{
+   display: flex;
+ }
+ .profil_msg_config{
+   display: none;
+ }
+ .profil_msg_config.active{
+   display: flex;
+ }
+ .profil_param_compte{
+   display: none;
+ }
+ .profil_param_compte.active{
+   display: flex;
+ }
+li:hover img{
+  transform: scale(1.5);
+  transform: translate(100%, 0);
 }
-.page_profil .profil_form_div form fieldset #adresse label{
-  font-size: 12px;
-}
-
 /*----------------------------------------panier------*/
 .page_cart{
   
