@@ -169,7 +169,7 @@ function showAccueil()
     <?php
     showFooter()
     ?>
-    <script src="../acceuil.js"></script>
+    <script src="../js/acceuil.js"></script>
   </body>
 
   </html>

@@ -16,7 +16,7 @@ function showHeader($css = "")
     <?php
     }
     ?>
-    <script src="../main.js"></script>
+    <script src="../js/main.js"></script>
     <title>Square Enix France</title>
   </head>
 <?php

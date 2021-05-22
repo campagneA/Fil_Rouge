@@ -106,8 +106,8 @@ showNav();
 
   </div>
 
-  <script src="jquery-3.6.0.js"></script>
-  <script src="cart.js"></script>
+  <script src="../js/jquery-3.6.0.js"></script>
+  <script src="../js/panier.js"></script>
 </body>
 
 </html>
