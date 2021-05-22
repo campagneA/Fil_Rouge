@@ -1132,7 +1132,7 @@ cursor: pointer;
  .profil_param_compte.active{
    display: flex;
  }
-li:hover img{
+ #nav_profil li:hover img{
   transform: scale(1.5);
   transform: translate(100%, 0);
 }
