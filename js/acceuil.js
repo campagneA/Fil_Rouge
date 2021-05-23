@@ -15,15 +15,15 @@ console.log(slides);
 setBgToAcceuil();
 
 function setBgToAcceuil() {
-    acceuil.style.backgroundImage = slides[activeSlide].style.backgroundImage;
-    //l'image de fond la slide est aussi celle d'acceuil;
+  acceuil.style.backgroundImage = slides[activeSlide].style.backgroundImage;
+  //l'image de fond la slide est aussi celle d'acceuil;
 }
 
 function setActiveSlide() {
-    slides.forEach(slide => slide.classList.remove('active'));
+  slides.forEach(slide => slide.classList.remove('active'));
 
-    slides[activeSlide].classList.add('active');
-    //la valeur de let activeSlide determine quelle slide est utilisée
+  slides[activeSlide].classList.add('active');
+  //la valeur de let activeSlide determine quelle slide est utilisée
 }
 
 // The easiest way to execute a function repeatedly is to use the global method setInterval()
@@ -50,26 +50,26 @@ function setActiveSlide() {
 const slider = document.querySelector('.slider_container');
 
 function playSlides() {
-    activeSlide++;
+  activeSlide++;
 
-    if (activeSlide > slides.length - 1) {
-        activeSlide = 0;
-    }
-    setBgToAcceuil();
-    setActiveSlide();
-    setActiveLabel();
-    setActiveSlideText()
+  if (activeSlide > slides.length - 1) {
+    activeSlide = 0;
+  }
+  setBgToAcceuil();
+  setActiveSlide();
+  setActiveLabel();
+  setActiveSlideText()
 }
 let clear;
 
 slider.addEventListener("mouseout", event => {
-    // console.log("Mouse out");
-    clear = setInterval(playSlides, 8000);
-    // console.log(clear);
+  // console.log("Mouse out");
+  clear = setInterval(playSlides, 8000);
+  // console.log(clear);
 });
 slider.addEventListener("mouseover", event => {
-    // console.log("Mouse in");
-    clearInterval(clear);
+  // console.log("Mouse in");
+  clearInterval(clear);
 });
 
 // matcher le label et la slide; activeSlide commence à 0
@@ -77,17 +77,17 @@ slider.addEventListener("mouseover", event => {
 const labels = document.querySelectorAll(".navigation label");
 // labels.forEach(label => console.log(label.id));
 function setActiveLabel() {
-    labels.forEach(label => label.classList.remove('active_label'));
-    labels[activeSlide].classList.add('active_label');
+  labels.forEach(label => label.classList.remove('active_label'));
+  labels[activeSlide].classList.add('active_label');
 }
 
 labels.forEach(label => label.addEventListener('click', () => {
-    // console.log('click');
-    activeSlide = label.id - 1;
-    setBgToAcceuil();
-    setActiveSlide();
-    setActiveLabel();
-    setActiveSlideText();
+  // console.log('click');
+  activeSlide = label.id - 1;
+  setBgToAcceuil();
+  setActiveSlide();
+  setActiveLabel();
+  setActiveSlideText();
 }))
 
 //recuperer les slide_text;
@@ -96,8 +96,8 @@ slides_texts = document.querySelectorAll('.slide_text');
 console.log(slides_texts);
 
 function setActiveSlideText() {
-    slides_texts.forEach(text => text.classList.remove('active_text'));
-    slides_texts[activeSlide].classList.add('active_text');
+  slides_texts.forEach(text => text.classList.remove('active_text'));
+  slides_texts[activeSlide].classList.add('active_text');
 }
 
 const trailerBtn = document.querySelectorAll('.trailer');
@@ -107,28 +107,29 @@ const modal = document.querySelector('.modal');
 console.log(trailerBtn);
 
 trailerBtn.forEach(btn => btn.addEventListener('click', () => {
-    openModal();
-    player.playVideo();
+  openModal();
+  player.playVideo();
 }))
 closeBtn.addEventListener('click', () => {
-    // console.log('here');
-    closeModal();
+  // console.log('here');
+  closeModal();
 })
 
 function openModal() {
-    modal.style.display = 'block';
+  modal.style.display = 'block';
 }
 function closeModal() {
-    modal.style.display = 'none';
+  modal.style.display = 'none';
 }
 
 /********************************************************************** Embed Youtube */
+
 
 var tag = document.createElement('script');
 const stop = document.querySelector('#closeBtn');
 const start = document.getElementById('#trailer1');
 stop.addEventListener('click', () => {
-    player.stopVideo();
+  player.stopVideo();
 })
 /**https://www.youtube.com/watch?v=JX8NAZAhS_s&t=57s */
 tag.src = "https://www.youtube.com/iframe_api";
@@ -139,31 +140,41 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 //    after the API code downloads.
 var player;
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-        height: '360',
-        width: '640',
-        videoId: 'JX8NAZAhS_s',
-        autoplay: '0',
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-        }
-    });
+  player = new YT.Player('player', {
+    height: '360',
+    width: '640',
+    videoId: 'JX8NAZAhS_s',
+    autoplay: '0',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
 }
+
+console.log('activeSlide  ' + activeSlide)
+
+const trailerList = [
+  'Yr76jZTERlk', 'w5fCIhI0FyE'
+]
+player.loadVideoById({
+  videoId: 'Yr76jZTERlk',
+  startSeconds: 0,
+})
 
 // // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
-    // event.target.playVideo(); 
+  // event.target.playVideo(); 
 }
 
 
 var done = false;
 function onPlayerStateChange(event) {
-    // if (event.data == YT.PlayerState.PLAYING && !done) {
-    //     setTimeout(stopVideo, 6000);
-    //     done = true;
-    // }
+  // if (event.data == YT.PlayerState.PLAYING && !done) {
+  //     setTimeout(stopVideo, 6000);
+  //     done = true;
+  // }
 }
 function stopVideo() {
-    player.stopVideo();
+  player.stopVideo();
 }

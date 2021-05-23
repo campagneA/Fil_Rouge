@@ -1032,11 +1032,11 @@ footer .footer_links ul li a:hover {
   width: 70vw;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr;
   overflow: hidden;
   font-family: Muli;
-  border-radius: 15px;
+  border-radius: 50px;
 }
 
 #nav_profil ul{
@@ -1045,19 +1045,22 @@ footer .footer_links ul li a:hover {
   height: 100%;
   display: grid;
   grid-template-rows: 1fr 2fr 2fr 2fr 2fr 1fr;
+  background-color: rgb(88, 97, 224);
 }
 #nav_profil ul li{
 list-style: none;
 display: flex;
 justify-content: center;
 cursor: pointer;
+
 }
-#nav_profil ul li:hover{
-  
- background-color: rgb(70, 121, 180);
+#nav_profil ul li.active img{
+  transform: scale(1.5);
+  transform: translate(100%, 0);
 }
 #nav_profil ul li img{
   width: 2vw;
+  transition: 0.5s ease;
 }
 #profil_useri{
   grid-row: 2/3;
@@ -1079,11 +1082,13 @@ cursor: pointer;
   display: flex;
  }
  .profil_user_infos.active div{
+  display: flex;
+  justify-content: space-between;
    height: 90%;
    width: 80%;
    margin: 0 auto;
    align-self: center;
-   justify-self: flex-end;
+   /* justify-self: flex-end; */
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
@@ -1091,23 +1096,16 @@ cursor: pointer;
  }
  .profil_user_infos.active div fieldset{
    display: flex;
-   justify-content: space-between;
-   align-items: center;
-   border: 0;
+   flex-direction: column;
  }
- .profil_user_infos.active div fieldset div{
-   max-height: 150px;
-   margin: 15px;
+ .profil_user_infos div fieldset input{
+  padding: 15px 0;
  }
- .profil_user_infos.active div fieldset div:last-child{
-  padding-bottom: 5.6px;
-}
- .profil_user_infos.active input{
+ .profil_user_infos input{
    background-color: transparent;
    border: 0;
    border-bottom: 2px white solid;
-   padding: 15px 0;
-   font-size: 18px;
+   font-size: 16px;
    color: #fff;
  }
  .profil_user_infos input:focus,
@@ -1132,10 +1130,7 @@ cursor: pointer;
  .profil_param_compte.active{
    display: flex;
  }
- #nav_profil li:hover img{
-  transform: scale(1.5);
-  transform: translate(100%, 0);
-}
+ 
 /*----------------------------------------panier------*/
 .page_cart{
   

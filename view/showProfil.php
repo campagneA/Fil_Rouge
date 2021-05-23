@@ -28,25 +28,28 @@ function showProfil()
         </nav>
         <div class="profil_user_infos active">
           <div>
-            <input type="text" name="nom" autocomplete="off">
-            <label for="nom">Nom</label>
-            <input type="text" name="prenom" autocomplete="off">
-            <label for="prenom">prenom</label>
-            <input type="email" name="email" autocomplete="off">
-            <label for="email">email</label>
-
-            <input type="text" name="adresse" autocomplete="off">
-            <label for="adresse">adresse</label>
             <fieldset>
-              <div>
-                <input type="tel" name="tel" autocomplete="off">
-                <label for="tel">telephone</label>
-              </div>
-              <div>
-                <input type="date" name="date_naissance" autocomplete="off">
-                <label for="date_naissance">date de naissance</label>
-              </div>
+              <input type="text" name="nom" autocomplete="off" placeholder="nom">
+              <!-- <label for="nom">Nom</label> -->
+              <input type="text" name="prenom" autocomplete="off" placeholder="prenom">
+              <!-- <label for="prenom">prenom</label> -->
+              <input type="email" name="email" autocomplete="off" placeholder="email">
+              <!-- <label for="email">email</label> -->
+              <input type="tel" name="tel" autocomplete="off" placeholder="telephone">
+              <!-- <label for="tel">telephone</label> -->
             </fieldset>
+
+            <fieldset>
+              <input type="text" name="rue" autocomplete="off" placeholder="Rue">
+              <!-- <label for="adresse">adresse</label> -->
+              <input type="text" name="ville" autocomplete="off" placeholder="Ville">
+              <!-- <label for="adresse">adresse</label> -->
+
+            </fieldset>
+
+            <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="date_naissance" autocomplete="off" placeholder="date de naissance">
+            <!-- <label for="date_naissance">date de naissance</label> -->
+
           </div>
         </div>
         <div class="profil_money_infos">
