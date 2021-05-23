@@ -2,13 +2,14 @@
 function pageInscription()
 {
 ?>
-    <form action="check_inscription.php" method="POST">
+    <form action="inscription.php" method="POST">
         <h1>INSCRIPTION</h1>
         <h2>Pseudo</h2>
         <input type="text" name="pseudo" placeholder="SquareEnix" class="center" autofocus>
         <div>
             <h5 class="left">Nom :</h5>
             <input type="text" name="nom" placeholder="Nom">
+
             <h5 class="left">Prenom :</h5>
             <input type="text" name="prenom" placeholder="Prénom">
         </div>
@@ -20,12 +21,12 @@ function pageInscription()
         </div>
         <div>
             <h5>Mot de passe :</h5>
-            <input type="password" name="passWord" placeholder="*******">
+            <input type="password" name="passWord2" placeholder="*******">
             <h5>Confirmer :</h5>
             <input type="password" name="passWordConf" placeholder="*******">
         </div>
         <ul class="position-button-inscription">
-            <li><a href="check_inscription.php" type="button">Inscription</a></li>
+            <li><input type="submit" name="inscription">goooo</a></li>
         </ul>
         <div class="position">
             <a href="profil.php" type="button">

@@ -1,15 +1,9 @@
 <?php
 include_once(__DIR__ . "/../view/jeux.php");
+include_once(__DIR__ . "/../view/showHeader.php");
+include_once(__DIR__ . "/../view/showFooter.php");
 
-header();
+afficheJeux();
 ?>
-
-<body>
-    <link rel="stylesheet" href="../css/style.css">
-    <?php
-    barNavigation();
-    afficheJeux();
-    ?>
-</body>
 
 </html>

@@ -21,7 +21,7 @@ function showNav()
       <nav class="nav_droite">
         <ul>
           <li><a href="research.php"><img src="../logo/Search.jpg" alt="Search" title="Rechercher"></a></li>
-          <li><a href="profil.php"><img src="../logo/Member.gif" alt="Profil" title="Profil"></a></li>
+          <li><a href="inscription.php"><img src="../logo/Member.gif" alt="Profil" title="Profil"></a></li>
           <li><a href="panier.php"><img src="../logo/Boutique.jpg" alt="panier" title="Panier"></a></li>
 
         </ul>
@@ -38,7 +38,7 @@ function showNav()
           <li><a href="boutique.php">boutique</a></li>
           <br>
           <li><input type="text" placeholder="Rechercher"></li>
-          <li><a href="profil.php">profil</a></li>
+          <li><a href="inscription.php">ins</a></li>
           <li><a href="panier.php">panier</a></li>
         </ul>
       </nav>
