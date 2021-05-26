@@ -3,7 +3,7 @@ body {
 }
 
 form {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background-image: url(../fonds_ecrans/acceuil/Fond_ecran_history.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,6 +14,7 @@ form {
   min-width: 375px;
   height: 500px;
   color: white;
+  margin-bottom: 300px;
 }
 
 @media screen and (min-width: 800px) {
@@ -34,9 +35,9 @@ form h2 {
   text-shadow: 2px 2px black;
 }
 
-form input[type="text"],
-form input[type="password"],
-form input[type="mail"] {
+form input[type='text'],
+form input[type='password'],
+form input[type='mail'] {
   text-align: center;
   display: block;
   width: 200px;
@@ -44,9 +45,9 @@ form input[type="mail"] {
   margin-bottom: 20px;
 }
 
-form input[type="text"]:focus,
-form input[type="password"]:focus,
-form input[type="mail"]:focus {
+form input[type='text']:focus,
+form input[type='password']:focus,
+form input[type='mail']:focus {
   background-color: black;
   color: white;
 }
