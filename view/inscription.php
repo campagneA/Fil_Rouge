@@ -17,10 +17,12 @@ function pageInscription()
   <html lang="en">
   <?php
   showHeader("../css/inscription.css");
-  showNav();
   ?>
 
   <body>
+    <?php
+    showNav();
+    ?>
     <form action="inscription.php" method="POST">
       <h1>INSCRIPTION</h1>
       <h2>Pseudo</h2>
@@ -45,7 +47,7 @@ function pageInscription()
         <input type="password" name="passWordConf" placeholder="*******">
       </div>
       <ul class="position-button-inscription">
-        <li><input type="submit" name="inscription">goooo</a></li>
+        <li><a type="submit" name="inscription">Inscription</a></li>
       </ul>
       <div class="position">
         <a href="profil.php" type="button">
