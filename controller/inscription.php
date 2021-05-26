@@ -8,7 +8,7 @@ include_once(__DIR__ . "/../view/showFooter.php");
 
 pageInscription();
 
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=squaredb', 'root', '');
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=fil_rouge', 'root', '');
 
 if (isset($_POST['inscription'])) {
   $pseudo = htmlspecialchars($_POST['pseudo']);
@@ -19,11 +19,16 @@ if (isset($_POST['inscription'])) {
   $password2 = htmlspecialchars($_POST['passWord2']);
   $passwordConfirm = htmlspecialchars($_POST['passWordConf']);
 
-  $insertmbr = $bdd->prepare("INSERT INTO inscrits(pseudo, nom, prenom, mail, confirmMail, password2, passwordConfirm) VALUES(?, ?, ?, ?, ?, ?, ?)");
-  $insertmbr->execute(array($pseudo, $nom, $prenom, $mail, $confirmMail, $password2, $passwordConfirm));
+  $hashPassword = password_hash($password2, PASSWORD_DEFAULT);
+
+  $insertmbr = $bdd->prepare("INSERT INTO user_connecte(pseudo, nom, prenom, mail, hash_mdp) VALUES(?, ?, ?, ?, ?)");
+  $insertmbr->execute(array($pseudo, $nom, $prenom, $mail, $hashPassword));
 
   echo "okkkkkkkkk";
+} else {
+  echo "not ocdzc,dsk,cds,cds,cdsl,csvsvsdk,,clk;";
 }
+
 
 
 

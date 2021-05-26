@@ -47,7 +47,7 @@ function pageInscription()
         <input type="password" name="passWordConf" placeholder="*******">
       </div>
       <ul class="position-button-inscription">
-        <li><a type="submit" name="inscription">Inscription</a></li>
+        <li><button type="submit" name="inscription">Inscription</button></li>
       </ul>
       <div class="position">
         <a href="profil.php" type="button">
