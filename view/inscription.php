@@ -1,4 +1,14 @@
 <?php
+include_once(__DIR__ . "/showHeader.php");
+include_once(__DIR__ . "/showFooter.php");
+
+function inscription()
+{
+    showHeader("../css/inscription.css");
+    pageInscription();
+    showFooter();
+}
+
 function pageInscription()
 {
 ?>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : Dim 02 mai 2021 à 15:44
--- Version du serveur :  10.4.14-MariaDB
--- Version de PHP : 7.4.11
+-- Généré le : mer. 26 mai 2021 à 09:13
+-- Version du serveur :  10.4.17-MariaDB
+-- Version de PHP : 7.4.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `squaredb`
+-- Base de données : `Fil_Rouge`
 --
 
 -- --------------------------------------------------------
@@ -63,12 +63,15 @@ CREATE TABLE `games` (
 
 CREATE TABLE `items_boutique` (
   `id_item` int(3) NOT NULL,
-  `nom` varchar(3) NOT NULL,
-  `cat_id` int(2) NOT NULL,
-  `description` int(11) NOT NULL,
-  `prix` int(11) NOT NULL,
-  `quantité` int(11) NOT NULL,
-  `photos` int(11) NOT NULL
+  `titre` varchar(50) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `format` varchar(50) NOT NULL,
+  `image` mediumblob NOT NULL,
+  `cat_id` int(1) NOT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  `prix` float(2,2) NOT NULL,
+  `quantité` int(3) NOT NULL,
+  `date_ajout` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -131,10 +134,10 @@ CREATE TABLE `quiz` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user_connecté`
+-- Structure de la table `user_connecte`
 --
 
-CREATE TABLE `user_connecté` (
+CREATE TABLE `user_connecte` (
   `id_user` int(3) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `mail` varchar(20) NOT NULL,
@@ -171,8 +174,7 @@ ALTER TABLE `games`
 -- Index pour la table `items_boutique`
 --
 ALTER TABLE `items_boutique`
-  ADD PRIMARY KEY (`id_item`),
-  ADD KEY `id_cat` (`cat_id`);
+  ADD PRIMARY KEY (`id_item`);
 
 --
 -- Index pour la table `message_forum`
@@ -203,9 +205,9 @@ ALTER TABLE `quiz`
   ADD KEY `quiz_game_id` (`game_id`);
 
 --
--- Index pour la table `user_connecté`
+-- Index pour la table `user_connecte`
 --
-ALTER TABLE `user_connecté`
+ALTER TABLE `user_connecte`
   ADD PRIMARY KEY (`id_user`);
 
 --
@@ -255,9 +257,9 @@ ALTER TABLE `questions`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `user_connecté`
+-- AUTO_INCREMENT pour la table `user_connecte`
 --
-ALTER TABLE `user_connecté`
+ALTER TABLE `user_connecte`
   MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT;
 
 --
@@ -275,7 +277,7 @@ ALTER TABLE `items_boutique`
 --
 ALTER TABLE `post_forum`
   ADD CONSTRAINT `cat_id` FOREIGN KEY (`cat_sujet_post`) REFERENCES `categorie_sujet` (`id_cat`),
-  ADD CONSTRAINT `user_id` FOREIGN KEY (`id_user`) REFERENCES `user_connecté` (`id_user`);
+  ADD CONSTRAINT `user_id` FOREIGN KEY (`id_user`) REFERENCES `user_connecte` (`id_user`);
 
 --
 -- Contraintes pour la table `questions`

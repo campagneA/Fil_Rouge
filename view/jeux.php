@@ -10,10 +10,13 @@ function afficheJeux()
     <html lang="en">
     <?php
     showHeader("../css/style.css");
-    showNav();
+
     ?>
 
     <body>
+        <?php
+        showNav();
+        ?>
         <div class="containr">
 
             <div class="items item1">

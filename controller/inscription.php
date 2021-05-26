@@ -6,7 +6,7 @@ include_once(__DIR__ . "/../view/inscription.php");
 include_once(__DIR__ . "/../view/showHeader.php");
 include_once(__DIR__ . "/../view/showFooter.php");
 
-pageInscription();
+inscription();
 
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=squaredb', 'root', '');
 

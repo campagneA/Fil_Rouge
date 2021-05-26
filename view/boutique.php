@@ -17,6 +17,7 @@ function boutique()
     navBoutique();
     listeBoutique();
     ?>
+    <script src="../js/boutique.js"></script>
   </body>
 
   </html>

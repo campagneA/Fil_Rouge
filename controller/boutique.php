@@ -2,4 +2,8 @@
 session_start();
 include_once(__DIR__ . "/../view/boutique.php");
 
-boutique();
+try {
+    boutique();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
