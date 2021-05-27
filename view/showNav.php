@@ -32,27 +32,21 @@ function showNav()
           <?php
           if (isset($_SESSION['pseudo'])) {
           ?>
-            <li id="icone_profil"><a href="profil.php"><img src="../logo/Member.gif" alt="Profil" title="Profil">
-              <?php
-            } else {
-              ?>
-            <li id="icone_profil"><a href="connexion.php"><img src="../logo/Member.gif" alt="Profil" title="Profil">
-              <?php
-            }
-              ?>
-              </a>
-              <div id="icone_profile_drop">
+            <li id="icone_profil"><a href="profil.php"><img src="../logo/Member.gif" alt="Profil" title="Profil"></a></li>
+          <?php
+          } else {
+          ?>
+            <li id="icone_profil"><a href="connexion.php"><img src="../logo/Member.gif" alt="Profil" title="Profil"></a></li>
+          <?php
+          }
+          ?>
 
-                <p><a href="#">Se connecter</a></p>
-                <p><a href="#">S'inscrire</a></p>
 
-              </div>
-            </li>
 
-            <li><a href="panier.php"><img src="../logo/Boutique.jpg" alt="panier" title="Panier"></a></li>
+          <li><a href="panier.php"><img src="../logo/Boutique.jpg" alt="panier" title="Panier"></a></li>
 
         </ul>
-        </a>
+
 
       </nav>
       <div class="btn_toggle_nav" onclick="toggleNav()"></div>
