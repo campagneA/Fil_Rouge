@@ -1,6 +1,11 @@
 <?php
-function showPanier()
+include_once(__DIR__ . '/showNav.php');
+include_once(__DIR__ . '/showHeader.php');
+include_once(__DIR__ . '/showFooter.php');
+function showPanier(array $items = "")
 {
+  showHeader();
+  showNav();
 ?>
 
   <body>
@@ -38,54 +43,6 @@ function showPanier()
           <td>truc</td>
           <td>truc</td>
           <td>truc</td>
-        </tr>
-        <tr>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-        </tr>
-        <tr>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-        </tr>
-        <tr>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-        </tr>
-        <tr>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-        </tr>
-        <tr>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-        </tr>
-        <tr>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-        </tr>
-        <tr>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-          <td>truc</td>
-        </tr>
-        <tr>
-          <td>total :</td>
-          <td></td>
-          <td></td>
-          <td></td>
         </tr>
       </table>
       <div class="cart_nav">

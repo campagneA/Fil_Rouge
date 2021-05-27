@@ -50,7 +50,7 @@ function pageInscription()
         <li><button type="submit" name="inscription">Inscription</button></li>
       </ul>
       <div class="position">
-        <a href="profil.php" type="button">
+        <a href="connexion.php" type="button">
           <h6>Vous avez un compte? <br /> Connecte toi ICI !!!</h6>
         </a>
       </div>
