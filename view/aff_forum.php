@@ -15,12 +15,12 @@ function pageForum(array $games, array $comments) {
     <div class="forum-container">
         <div class="form">
             <form action="../controller/forum.php?comment=process" method="POST">
-                <label for="game">Select a game</label><br>
+                <label for="game"><strong>BIENVENUE AU FORUM !<br><br>Choisissez le jeu que vous voulez commentez :</strong></label><br><br>
                 <select name="game">
                     <?php echo $select; ?>
                 </select><br><br>
                 
-                <label for="subject"><strong>BIENVENUE AU FORUM !</strong></label><br>
+                <label for="subject"></label><br>
                 <input type="text" name="subject" placeholder="Entrez le titre du sujet"><br><br>
                 
                 <label for="message"></label><br>
