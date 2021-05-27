@@ -61,7 +61,7 @@ function pageHistoire()
 
 
         <div class="history-block">
-            <div class="history-pic-low">
+            <div class="history-pic">
                 <img src="../photos en tt genre/final_fantasy_x_spira_90.jpg" alt="image histoire">
             </div>
 
