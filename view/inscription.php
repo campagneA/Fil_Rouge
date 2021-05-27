@@ -26,19 +26,19 @@ function pageInscription()
     <form action="inscription.php" method="POST">
       <h1>INSCRIPTION</h1>
       <h2>Pseudo</h2>
-      <input type="text" name="pseudo" placeholder="SquareEnix" class="center" autofocus>
+      <input type="text" name="pseudo" placeholder="SquareEnix" class="center" value="<?php if(isset($pseudo)) {echo $pseudo;}?>" autofocus>
       <div>
         <h5 class="left">Nom :</h5>
-        <input type="text" name="nom" placeholder="Nom">
+        <input type="text" name="nom" placeholder="Nom" value="<?php if(isset($nom)) {echo $nom;}?>">
 
         <h5 class="left">Prenom :</h5>
-        <input type="text" name="prenom" placeholder="Prénom">
+        <input type="text" name="prenom" placeholder="Prénom" value="<?php if(isset($prenom)) {echo $prenom;}?>">
       </div>
       <div>
         <h5>Adresse Mail :</h5>
-        <input type="mail" name="mail" placeholder="exemple@exemple.com">
+        <input type="mail" name="mail" placeholder="exemple@exemple.com" value="<?php if(isset($mail)) {echo $mail;}?>">
         <h5>Confirmer Mail :</h5>
-        <input type="mail" name="mailConf" placeholder="exemple@exemple.com">
+        <input type="mail" name="mailConf" placeholder="exemple@exemple.com" value="<?php if(isset($mailConf)) {echo $mailConf;}?>">
       </div>
       <div>
         <h5>Mot de passe :</h5>
@@ -50,11 +50,14 @@ function pageInscription()
         <li><button type="submit" name="inscription">Inscription</button></li>
       </ul>
       <div class="position">
-        <a href="connexion.php" type="button">
+        <a href="profil.php" type="button">
           <h6>Vous avez un compte? <br /> Connecte toi ICI !!!</h6>
         </a>
       </div>
     </form>
+    <?php
+    
+    ?>
 
   </body>
 
