@@ -6,11 +6,11 @@ body {
 
 .titren4 {
 
-    margin: 150px auto 0 auto;
+    margin: 100px auto 0 auto;
     width: 300px;
     font-size: 2em ;
     text-align: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
 }
   
