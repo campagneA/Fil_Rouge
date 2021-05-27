@@ -198,16 +198,6 @@ body {
   background-color: #8d8484;
 }
 
-/* .title {
-  width: 50%;
-  text-align: center;
-  text-decoration: underline;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.8em;
-  font-weight: bold;
-  /* border-bottom: 1px black solid;
-}*/
-
 .divider {
   width: 450px;
   height: 2px;
@@ -237,7 +227,7 @@ body {
 .history-text {
   width: 712px;
   height: 360px;
-  margin-left: 15px;
+  margin-left: 10px;
   padding: 40px;
   font-size: 0.8em;
   font-style: italic;
@@ -271,71 +261,8 @@ body {
     float: none;
     margin: 0 auto;
   }
-
-
-  /* .title {
-    width: 50%;
-    margin: 15% auto;
-    text-align: center;
-    text-decoration: underline;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 1.8em;
-    font-weight: bold;
-    /* border-bottom: 1px black solid; 
-  } */
-
-  /* .divider {
-    width: 200px;
-    height: 2px;
-    background: #333;
-    margin-left: 24%;
-  }
-
-  .history-block .history-text {
-    width: 55%;
-    margin: 40px auto 0 auto;
-    font-style: italic;
-    font-weight: bold;
-    float: none;
-  }
-
-  .history-block .history-pic-top {
-    width: 45%;
-    margin: 24% auto;
-    float: none;
-  }
-
-  .history-block {
-    width: 90%;
-    margin-top: 180px;
-    position: absolute; 
-    margin-left: 19%; 
-  }
-
-  .history-block .history-pic-mid {
-    width: 55%;
-    margin: 10% auto;
-    float: none;
-  }
-
-  .history-block .history-pic-low {
-    width: 55%;
-    margin: 10% auto;
-    float: none;
-  }
-
-  .history-block.topblock {
-    margin-top: 100px;
-  }
-} */
 }
-/* .history-block .floatleft {
-    float: left;
-  }
-  .history-block .floatright {
-    float: right;
-  }
-} */
+
 /* HISTORY RESPONSIVE(fin) */
 /*----------------------------------------HISTORY(fin)-----------------------------------------------*/
 /****** PAGE ACCEUIL (zak) ******/
@@ -960,8 +887,7 @@ footer .footer_links ul li a:hover {
 
 /*--------------------------------------------JEUX---------------------------------------------------*/
 /* JEUX PAGINATION */
-.pagination {
-}
+
 .page-item {
   margin-top: 100%;
   width: 100%;

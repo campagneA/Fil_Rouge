@@ -1,21 +1,22 @@
-/*--------------------------------------------FORUM---------------------------------------------------*/
+/*-----FORUM-----*/
 
-.backG-color {
-  background-color: rgb(100, 97, 97);
-}
-
-#forum-title {
-  width: 50%;
-  margin: 3.9% auto;
+.forum-container {
+  background-color: rgb(153, 151, 151);
+  padding: 0.1px;
   text-align: center;
-  text-decoration: underline;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.8em;
-  font-weight: bold;
-  /* border-bottom: 1px black solid; */
 }
 
-.center-buttons {
-  margin: auto 45%;
+.form {
+  padding-right: 0.1px;
+
 }
-/*--------------------------------------------FORUM(fin)---------------------------------------------------*/
+
+.comment-container {
+  background-color: rgb(119, 116, 116);
+  margin: 15px;
+  border-width: 1px 3px 3px 1px;
+  border-color: #7e535a;
+  border-style: solid;
+  border-radius: 6px;
+  text-align: center;
+}

@@ -1,7 +1,14 @@
 <?php
+include_once(__DIR__ . '/showNav.php');
+include_once(__DIR__ . '/showHeader.php');
+include_once(__DIR__ . '/showFooter.php');
+
 function pageHistoire()
 {
+    showHeader("../css/style.css");
+    showNav();
 ?>
+
     <div class="mainBlock">
         <!-- <div class="title">L'HISTOIRE DE SQUARE</div> -->
         <!-- <div class="divider"></div> -->
@@ -54,7 +61,7 @@ function pageHistoire()
 
 
         <div class="history-block">
-            <div class="history-pic-low floatleft">
+            <div class="history-pic-low">
                 <img src="../photos en tt genre/final_fantasy_x_spira_90.jpg" alt="image histoire">
             </div>
 
@@ -77,5 +84,8 @@ function pageHistoire()
 
     </div>
 <?php
+
+showFooter();
+
 }
 ?>
