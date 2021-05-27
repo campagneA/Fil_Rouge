@@ -2,10 +2,10 @@
 -- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : jeu. 27 mai 2021 à 15:55
--- Version du serveur :  10.4.19-MariaDB
--- Version de PHP : 8.0.6
+-- Hôte : localhost:3306
+-- Généré le : jeu. 27 mai 2021 à 16:34
+-- Version du serveur :  10.4.14-MariaDB
+-- Version de PHP : 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,36 +24,36 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `categorie`
---
-
-CREATE TABLE `categorie` (
-  `id_cat` int(2) NOT NULL,
-  `nom_cat` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `categorie_sujet`
---
-
-CREATE TABLE `categorie_sujet` (
-  `id_cat` int(2) NOT NULL,
-  `nom_cat` varchar(90) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `games`
 --
 
 CREATE TABLE `games` (
   `game_id` int(2) NOT NULL,
-  `name` varchar(15) NOT NULL,
+  `name` varchar(45) NOT NULL,
   `shortname` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `games`
+--
+
+INSERT INTO `games` (`game_id`, `name`, `shortname`) VALUES
+(1, 'Final Fantasy I', 'FFI'),
+(2, 'Final Fantasy II', 'FFII'),
+(3, 'Final Fantasy III', 'FFIII'),
+(4, 'Final Fantasy IV', 'FFIV'),
+(5, 'Final Fantasy V', 'FFV'),
+(6, 'Final Fantasy VI', 'FFVI'),
+(7, 'Final Fantasy VII', 'FFVII'),
+(8, 'Final Fantasy VIII', 'FFVIII'),
+(9, 'Final Fantasy IX', 'FFIX'),
+(10, 'Final Fantasy X', 'FFX'),
+(11, 'Final Fantasy XI', 'FFXI'),
+(12, 'Final Fantasy XII', 'FFXII'),
+(13, 'Final Fantasy XIII', 'FFXIII'),
+(14, 'Final Fantasy XIV', 'FFXIV'),
+(15, 'Final Fantasy XV', 'FFXV'),
+(16, 'Final Fantasy XVI', 'FFXVI');
 
 -- --------------------------------------------------------
 
@@ -94,34 +94,32 @@ INSERT INTO `items_boutique` (`id_item`, `titre`, `name`, `format`, `image`, `ca
 -- --------------------------------------------------------
 
 --
--- Structure de la table `message_forum`
---
-
-CREATE TABLE `message_forum` (
-  `id` int(3) NOT NULL,
-  `date` int(11) NOT NULL,
-  `sujet` varchar(30) NOT NULL,
-  `page` varchar(10) NOT NULL,
-  `contenu` text NOT NULL,
-  `id_post` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `post_forum`
 --
 
 CREATE TABLE `post_forum` (
   `id_post` int(3) NOT NULL,
-  `date_post` int(11) NOT NULL,
+  `date_post` varchar(50) NOT NULL,
   `contenu` text NOT NULL,
-  `page` varchar(10) NOT NULL,
   `sujet` varchar(40) NOT NULL,
-  `cat_sujet_post` int(3) NOT NULL,
-  `id_user` int(3) NOT NULL
+  `author` int(3) NOT NULL,
+  `game` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `post_forum`
+--
+
+INSERT INTO `post_forum` (`id_post`, `date_post`, `contenu`, `sujet`, `author`, `game`) VALUES
+(4, '2021-05-27 14:52:09', 'vnfdhhtrdth', 'tryryrryeyr', 1, 4),
+(5, '2021-05-27 15:04:16', 'vazdhihlcdmpzchmpazcmazoejczeoajooecjjce', 'koikoijur', 1, 11),
+(6, '2021-05-27 15:20:17', 'cvazercercvdcceeace', 'aadaevfecver', 1, 6),
+(7, '2021-05-27 15:38:25', 'comment allez vous ?!!', 'hello', 1, 6),
+(8, '2021-05-27 16:23:53', 'message = success', 'Test 121641', 1, 9),
+(9, '2021-05-27 16:24:22', 'message = success', 'Test 121641', 1, 9),
+(10, '2021-05-27 16:25:36', 'jopdgpigjierjjgzgo', 'hello', 1, 5),
+(11, '2021-05-27 16:26:10', 'dfhdtrhyerhy', 'tryryrryeyrdfh', 1, 1),
+(12, '2021-05-27 16:28:46', 'tyytgfbhtr\'(y\'((hg\"', 'hello', 1, 16);
 
 -- --------------------------------------------------------
 
@@ -180,18 +178,6 @@ INSERT INTO `user_connecte` (`id_user`, `pseudo`, `nom`, `prenom`, `mail`, `role
 --
 
 --
--- Index pour la table `categorie`
---
-ALTER TABLE `categorie`
-  ADD PRIMARY KEY (`id_cat`);
-
---
--- Index pour la table `categorie_sujet`
---
-ALTER TABLE `categorie_sujet`
-  ADD PRIMARY KEY (`id_cat`);
-
---
 -- Index pour la table `games`
 --
 ALTER TABLE `games`
@@ -204,18 +190,10 @@ ALTER TABLE `items_boutique`
   ADD PRIMARY KEY (`id_item`);
 
 --
--- Index pour la table `message_forum`
---
-ALTER TABLE `message_forum`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Index pour la table `post_forum`
 --
 ALTER TABLE `post_forum`
-  ADD PRIMARY KEY (`id_post`),
-  ADD KEY `cat_id` (`cat_sujet_post`),
-  ADD KEY `user_id` (`id_user`);
+  ADD PRIMARY KEY (`id_post`);
 
 --
 -- Index pour la table `questions`
@@ -242,22 +220,10 @@ ALTER TABLE `user_connecte`
 --
 
 --
--- AUTO_INCREMENT pour la table `categorie`
---
-ALTER TABLE `categorie`
-  MODIFY `id_cat` int(2) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `categorie_sujet`
---
-ALTER TABLE `categorie_sujet`
-  MODIFY `id_cat` int(2) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT pour la table `games`
 --
 ALTER TABLE `games`
-  MODIFY `game_id` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `game_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT pour la table `items_boutique`
@@ -266,16 +232,10 @@ ALTER TABLE `items_boutique`
   MODIFY `id_item` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT pour la table `message_forum`
---
-ALTER TABLE `message_forum`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT pour la table `post_forum`
 --
 ALTER TABLE `post_forum`
-  MODIFY `id_post` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_post` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT pour la table `questions`
@@ -292,13 +252,6 @@ ALTER TABLE `user_connecte`
 --
 -- Contraintes pour les tables déchargées
 --
-
---
--- Contraintes pour la table `post_forum`
---
-ALTER TABLE `post_forum`
-  ADD CONSTRAINT `cat_id` FOREIGN KEY (`cat_sujet_post`) REFERENCES `categorie_sujet` (`id_cat`),
-  ADD CONSTRAINT `user_id` FOREIGN KEY (`id_user`) REFERENCES `user_connecte` (`id_user`);
 
 --
 -- Contraintes pour la table `questions`

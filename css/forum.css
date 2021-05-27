@@ -2,13 +2,9 @@
 
 .forum-container {
   background-color: rgb(153, 151, 151);
-  padding: 0.1px;
+  min-height: 800px; /*nécessaire quand la page est trop courte lors de la confirmation du post*/
+  padding: 80px 0;
   text-align: center;
-}
-
-.form {
-  margin-top: 80px;
-  padding-right: 0.1px;
 }
 
 .comment-container {

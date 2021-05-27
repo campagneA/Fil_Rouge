@@ -22,16 +22,10 @@ class ForumDAO extends CommonDAO
         $stmt->bind_param('sssi', ...$val);
         $stmt->execute();
 
-        if(!$conn->error){
-            $err = "Success process";
-        } else {
-            $err = "Error processing :".$conn->error;
-        }
-
         $stmt->free_result();
         $stmt->close();
 
-        return $err;
+        return $conn->error;
     }
 
     public function get_games() : array
