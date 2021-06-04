@@ -61,6 +61,7 @@ function showAccueil()
           </div>
         </div>
       </div>
+
       <div class="wrap_acc">
         <div class="nos_jeux">
           <h1>Nos franchises</h1>

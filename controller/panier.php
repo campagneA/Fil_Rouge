@@ -3,6 +3,7 @@ include_once(__DIR__ . '/../view/showHeader.php');
 include_once(__DIR__ . '/../view/showNav.php');
 include_once(__DIR__ . '/../view/showFooter.php');
 include_once(__DIR__ . '/../view/showPanier.php');
+session_start();
 ?>
 <?php
 //si l'user est connecté : lui creer un panier s'il n'en a pas;

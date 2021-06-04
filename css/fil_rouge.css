@@ -38,7 +38,7 @@ body {
   top: 0;
   width: 100%;
   height: 60px;
-  background-color: #000;
+  background-color: rgb(0, 0, 0);
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
@@ -48,6 +48,7 @@ body {
 .header_navbar a {
   text-decoration: none;
 }
+
 .header_navbar .logo {
   /* line-height: 60px; */
   margin-left: 3vw;
@@ -827,7 +828,7 @@ background-size: cover; */
 footer {
   height: 400px;
   width: 100vw;
-  background-color: #000;
+  background-color: rgb(0, 0, 0);
   font-size: 20px;
   font-weight: lighter;
   margin: 0;
@@ -1021,41 +1022,53 @@ footer .footer_links ul li a:hover {
   font-family: Muli;
 }
 .page_profil {
-  padding-top: 100px;
+  padding-top: 300px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   background: url('../photos\ en\ tt\ genre/gens_foret.jpg') 50% 50% no-repeat;
   background-size: cover;
   color: #fff;
   overflow: hidden;
+  padding-bottom: 100px;
 }
 .cont_profil {
   background-color: rgba(0, 0, 0, 0.4);
-  height: 90%;
-  width: 70vw;
+  height: 80vh;
+  width: 80vw;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 7fr;
   grid-template-rows: 1fr;
-  overflow: hidden;
   font-family: Muli;
   border-radius: 50px;
-  margin-bottom: 300px;
+  margin-bottom: 200px;
 }
-
+/* [type='checkbox'] {
+  vertical-align: middle;
+} */
+.checkbox_div {
+  display: flex;
+}
+.fieldsets_container .checkbox {
+  width: 30px;
+  height: 30px;
+}
 #nav_profil ul {
   grid-column: 1/2;
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-rows: 1fr 2fr 2fr 2fr 2fr 1fr;
-  background-color: rgb(88, 97, 224);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px 0 0 15px;
+  align-self: flex-start;
+  justify-self: flex-start;
 }
 #nav_profil ul li {
   list-style: none;
@@ -1065,11 +1078,12 @@ footer .footer_links ul li a:hover {
 }
 #nav_profil ul li.active img {
   transform: scale(1.5);
-  transform: translate(100%, 0);
+  transform: translate(60%, 0);
 }
 #nav_profil ul li img {
   width: 2vw;
   transition: 0.5s ease;
+  justify-self: flex-start;
 }
 #profil_useri {
   grid-row: 2/3;
@@ -1090,7 +1104,8 @@ footer .footer_links ul li a:hover {
   grid-column: 2/3;
   display: flex;
 }
-.profil_user_infos.active div {
+
+.fieldsets_container {
   display: flex;
   justify-content: space-between;
   height: 90%;
@@ -1102,23 +1117,51 @@ footer .footer_links ul li a:hover {
   flex-direction: column;
   justify-content: space-evenly;
   text-transform: capitalize;
+  padding-right: 30px;
+  color: #fff;
 }
-.profil_user_infos.active div fieldset {
+.fieldsets_container fieldset {
   display: flex;
   flex-direction: column;
 }
-.profil_user_infos div fieldset input {
-  padding: 15px 0;
+.fieldsets_container fieldset input::placeholder {
+  color: rgb(219, 199, 199);
 }
-.profil_user_infos input {
-  background-color: transparent;
+.profil_input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background: transparent;
   border: 0;
-  border-bottom: 2px white solid;
-  font-size: 16px;
+  border-bottom: 1px white solid transparent;
+  font-weight: lighter;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
   color: #fff;
 }
-.profil_user_infos input:focus,
-.profil_user_infos input:valid {
+
+.profil_input:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+.profil_input:focus {
+  background: rgba(0, 0, 0, 0.5);
+  cursor: text;
+}
+.fieldsets_container fieldset input:focus,
+.fieldsets_container fieldset input:valid {
+  outline: 0;
+}
+.fieldsets_container fieldset textarea {
+  border-radius: 5px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0;
+  padding: 10px;
+}
+.fieldsets_container fieldset textarea:focus {
   outline: 0;
 }
 .profil_money_infos {
@@ -1126,20 +1169,38 @@ footer .footer_links ul li a:hover {
 }
 .profil_money_infos.active {
   display: flex;
+  flex-direction: column;
+  grid-column: 2/3;
 }
 .profil_msg_config {
   display: none;
 }
 .profil_msg_config.active {
   display: flex;
+  grid-column: 2/3;
 }
 .profil_param_compte {
   display: none;
 }
 .profil_param_compte.active {
   display: flex;
+  grid-column: 2/3;
 }
-
+#adresse_label {
+  text-align: center;
+  font-size: 14px;
+}
+.cont_profil label {
+  display: inline-block;
+  text-align: right;
+  padding-right: 25px;
+  font-size: 12px;
+  font-style: italic;
+  color: rgb(117, 114, 114);
+}
+.cont_profil input {
+  display: inline-block;
+}
 /*----------------------------------------panier------*/
 .page_cart {
   padding-top: 70px;

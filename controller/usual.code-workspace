@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "..\\..\\Prog\\Afpa\\MyRep"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Fil_Rouge"
+  }
+}

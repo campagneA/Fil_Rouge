@@ -1,7 +1,6 @@
 <?php
 function showHeader($css = "")
 {
-  session_start();
 ?>
 
   <head>

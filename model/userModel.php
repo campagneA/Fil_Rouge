@@ -1,6 +1,6 @@
 <?php
 
-class User
+class UserModel
 {
 
   private $id;
@@ -20,6 +20,17 @@ class User
   public function setId(int $id): self
   {
     $this->id = $id;
+    return $this;
+  }
+
+  public function getTelephone(): int
+  {
+    return $this->telephone;
+  }
+
+  public function setTelephone(int $telephone): self
+  {
+    $this->telephone = $telephone;
     return $this;
   }
 

@@ -16,7 +16,9 @@ $(document).ready(() => {
           mdpPHP: mdp,
         },
         success: (response) => {
-          window.location.replace('acceuil.php');
+          window.history.back();
+          // window.location.replace('acceuil.php');
+          // console.log(response);
         },
         dataType: 'text',
       });
