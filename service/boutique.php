@@ -1,17 +1,27 @@
 <?php
 include_once(__DIR__ . '/../DAO/boutiqueDAO.php');
-include_once(__DIR__ . '/../model/boutique.php');
 
 class BoutiqueService
 {
-  public function searchBoutique()
-  {
-    try {
-      $listeBoutique = new BoutiqueDAO;
-      $listeBoutique->searchBoutique();
-    } catch (DAOException $a) {
-      throw new ServiceException($a->getMessage());
+    public function searchBoutique()
+    {
+        try {
+            $listeBoutique = new BoutiqueDAO();
+            $listeResult = $listeBoutique->searchBoutique();
+        } catch (DAOException $a) {
+            throw new ServiceException($a->getMessage());
+        }
+        return $listeResult;
     }
-    return $listeBoutique;
-  }
+
+    public function searchBoutiqueBy($id)
+    {
+        try {
+            $listeBoutique = new BoutiqueDAO();
+            $listeResult = $listeBoutique->searchBoutiqueBy($id);
+        } catch (DAOException $a) {
+            // throw new ServiceException($a->getMessage());
+        }
+        return $listeResult;
+    }
 }

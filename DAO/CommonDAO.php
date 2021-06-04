@@ -7,7 +7,6 @@ class CommonDAO
   private $username = "root";
   private $dbPassword = "";
   private $dbName = "fil_rouge";
-
   function connexion()
   {
 

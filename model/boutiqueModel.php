@@ -3,21 +3,59 @@
 class Boutique
 {
 
-  private $id;
+  private $id_item;
+  private $titre;
+  private $name;
+  private $format;
   private $image;
+  private $cat_id;
   private $description;
   private $prix;
-  private $titre;
+  private $quantite;
+  private $date_ajout;
 
 
-  public function getId(): int
+  public function getId_item(): int
   {
-    return $this->id;
+    return $this->id_item;
   }
 
-  public function setId(int $id): self
+  public function setId_item(int $id_item): self
   {
-    $this->id = $id;
+    $this->id_item = $id_item;
+    return $this;
+  }
+
+  public function getTitre(): string
+  {
+    return $this->titre;
+  }
+
+  public function setTitre(string $titre): self
+  {
+    $this->titre = $titre;
+    return $this;
+  }
+
+  public function getName(): string
+  {
+    return $this->name;
+  }
+
+  public function setName(string $name): self
+  {
+    $this->name = $name;
+    return $this;
+  }
+
+  public function getFormat(): string
+  {
+    return $this->format;
+  }
+
+  public function setFormat(string $format): self
+  {
+    $this->format = $format;
     return $this;
   }
 
@@ -26,9 +64,20 @@ class Boutique
     return $this->image;
   }
 
-  public function setImage($image)
+  public function setImage($image): self
   {
     $this->image = $image;
+    return $this;
+  }
+
+  public function getCat_id(): int
+  {
+    return $this->cat_id;
+  }
+
+  public function setCat_id(int $cat_id): self
+  {
+    $this->cat_id = $cat_id;
     return $this;
   }
 
@@ -54,23 +103,25 @@ class Boutique
     return $this;
   }
 
-  /**
-   * Get the value of titre
-   */
-  public function getTitre()
+  public function getQuantite(): int
   {
-    return $this->titre;
+    return $this->quantite;
   }
 
-  /**
-   * Set the value of titre
-   *
-   * @return  self
-   */
-  public function setTitre($titre)
+  public function setQuantite(int $quantite): self
   {
-    $this->titre = $titre;
+    $this->quantite = $quantite;
+    return $this;
+  }
 
+  public function getDate_ajout()
+  {
+    return $this->date_ajout;
+  }
+
+  public function setDate_ajout($date_ajout): self
+  {
+    $this->date_ajout = $date_ajout;
     return $this;
   }
 }

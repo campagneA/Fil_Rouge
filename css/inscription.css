@@ -87,14 +87,15 @@ div input {
   text-align: center;
 }
 
-.position-button-inscription li a {
+.position-button-inscription li button {
+  background-color: grey;
   display: block;
   text-decoration: none;
   color: white;
   padding: 14px 16px;
 }
 
-.position-button-inscription li a:hover {
+.position-button-inscription li button:hover {
   background-color: #111;
   color: white;
 }
