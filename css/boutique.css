@@ -125,13 +125,47 @@ div.img .button-boutique-right {
   cursor: pointer;
 }
 
-div.img button {
+div.img .button-boutique-left,
+div.img .button-boutique-right {
   background-color: rgb(56, 56, 56);
   color: white;
 }
 
-div.img button:hover {
+div.img .button-boutique-left:hover,
+div.img .button-boutique-right:hover {
   border: unset;
   background-color: #ffffff;
   color: black;
+}
+
+.button-admin {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.button-admin .button-modifier-item,
+.button-admin .button-supp-item {
+  list-style-type: none;
+  text-decoration: none;
+  border: unset;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  color: rgb(5, 5, 5);
+  padding: 2px 7px;
+}
+
+.button-admin .button-modifier-item:hover,
+.button-admin .button-supp-item:hover {
+  background-color: rgb(56, 56, 56);
+  color: #ffffff;
+}
+
+form.form-ajout {
+  position: absolute;
+  top: 10%;
+  left: 30%;
 }

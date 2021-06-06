@@ -59,12 +59,12 @@ class Boutique
     return $this;
   }
 
-  public function getImage()
+  public function getImage(): string
   {
     return $this->image;
   }
 
-  public function setImage($image): self
+  public function setImage(string $image): self
   {
     $this->image = $image;
     return $this;
@@ -92,12 +92,12 @@ class Boutique
     return $this;
   }
 
-  public function getPrix(): int
+  public function getPrix(): float
   {
     return $this->prix;
   }
 
-  public function setPrix(int $prix): self
+  public function setPrix(float $prix): self
   {
     $this->prix = $prix;
     return $this;

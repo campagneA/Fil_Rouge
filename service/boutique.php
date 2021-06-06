@@ -24,4 +24,20 @@ class BoutiqueService
         }
         return $listeResult;
     }
+
+    public function ajoutItemBoutique($item)
+    {
+        $ajoutBoutique = new BoutiqueDAO();
+        $ajoutBoutique->ajoutItemBoutique($item);
+    }
+
+    public function modififierItemBoutique($item)
+    {
+    }
+
+    public function supprimerItemBoutique($id)
+    {
+        $itemBoutique = new BoutiqueDAO();
+        $itemBoutique->supprimerItemBoutique($id);
+    }
 }

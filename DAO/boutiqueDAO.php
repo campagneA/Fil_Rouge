@@ -4,65 +4,95 @@ include_once(__DIR__ . "/../exceptions/DAOException.php");
 
 class BoutiqueDAO extends CommonDAO
 {
-  function searchBoutique()
-  {
-    try {
-      $bdd = $this->connexion();
-      $stmt = $bdd->prepare("select * from items_boutique order by date_ajout desc limit 6;");
-      $stmt->execute();
-      $rs = $stmt->get_result();
-      $data = $rs->fetch_all(MYSQLI_ASSOC);
-      $listeBoutique = [];
-      $rs->free();
-      $bdd->close();
-    } catch (mysqli_sql_exception $a) {
-      $message = "Un problème est survenu, veuillez réessayé ultérieurement!!!";
-      throw new DAOException($message);
+    function searchBoutique()
+    {
+        try {
+            $bdd = $this->connexion();
+            $stmt = $bdd->prepare("SELECT * FROM items_boutique ORDER BY id_item DESC LIMIT 6;");
+            $stmt->execute();
+            $rs = $stmt->get_result();
+            $data = $rs->fetch_all(MYSQLI_ASSOC);
+            $listeBoutique = [];
+            $rs->free();
+            $bdd->close();
+        } catch (mysqli_sql_exception $a) {
+            $message = "Un problème est survenu, veuillez réessayé ultérieurement!!!";
+            throw new DAOException($message);
+        }
+        foreach ($data as $value) {
+            $objetBoutique = (new Boutique)->setId_item($value["id_item"])
+                ->setTitre($value["titre"])
+                ->setName($value["name"])
+                ->setFormat($value["format"])
+                ->setImage($value["image"])
+                ->setCat_id($value["cat_id"])
+                ->setDescription($value["description"])
+                ->setPrix($value["prix"])
+                ->setQuantite($value["quantite"])
+                ->setDate_ajout($value["date_ajout"]);
+            $listeBoutique[] = $objetBoutique;
+        }
+        return $listeBoutique;
     }
-    foreach ($data as $value) {
-      $objetBoutique = (new Boutique)->setId_item($value["id_item"])
-        ->setTitre($value["titre"])
-        ->setName($value["name"])
-        ->setFormat($value["format"])
-        ->setImage($value["image"])
-        ->setCat_id($value["cat_id"])
-        ->setDescription($value["description"])
-        ->setPrix($value["prix"])
-        ->setQuantite($value["quantite"])
-        ->setDate_ajout($value["date_ajout"]);
-      $listeBoutique[] = $objetBoutique;
-    }
-    return $listeBoutique;
-  }
 
-  function searchBoutiqueBy($id)
-  {
-    try {
-      $bdd = $this->connexion();
-      $stmt = $bdd->prepare("select * from items_boutique where cat_id = " . $id . " order by date_ajout limit 6;");
-      $stmt->execute();
-      $rs = $stmt->get_result();
-      $data = $rs->fetch_all(MYSQLI_ASSOC);
-      $listeBoutique = [];
-      $rs->free();
-      $bdd->close();
-    } catch (mysqli_sql_exception $a) {
-      $message = "Un problème est survenu, veuillez réessayé ultérieurement!!!";
-      throw new DAOException($message);
+    function searchBoutiqueBy($id)
+    {
+        try {
+            $bdd = $this->connexion();
+            $stmt = $bdd->prepare("SELECT * FROM items_boutique WHERE cat_id = $id ORDER BY date_ajout LIMIT 6;");
+            $stmt->execute();
+            $rs = $stmt->get_result();
+            $data = $rs->fetch_all(MYSQLI_ASSOC);
+            $listeBoutique = [];
+            $rs->free();
+            $bdd->close();
+        } catch (mysqli_sql_exception $a) {
+            $message = "Un problème est survenu, veuillez réessayé ultérieurement!!!";
+            throw new DAOException($message);
+        }
+        foreach ($data as $value) {
+            $objetBoutique = (new Boutique)->setId_item($value["id_item"])
+                ->setTitre($value["titre"])
+                ->setName($value["name"])
+                ->setFormat($value["format"])
+                ->setImage($value["image"])
+                ->setCat_id($value["cat_id"])
+                ->setDescription($value["description"])
+                ->setPrix($value["prix"])
+                ->setQuantite($value["quantite"])
+                ->setDate_ajout($value["date_ajout"]);
+            $listeBoutique[] = $objetBoutique;
+        }
+        return $listeBoutique;
     }
-    foreach ($data as $value) {
-      $objetBoutique = (new Boutique)->setId_item($value["id_item"])
-        ->setTitre($value["titre"])
-        ->setName($value["name"])
-        ->setFormat($value["format"])
-        ->setImage($value["image"])
-        ->setCat_id($value["cat_id"])
-        ->setDescription($value["description"])
-        ->setPrix($value["prix"])
-        ->setQuantite($value["quantite"])
-        ->setDate_ajout($value["date_ajout"]);
-      $listeBoutique[] = $objetBoutique;
+
+    public function ajoutItemBoutique($item)
+    {
+        $bdd = $this->connexion();
+        $titre = $item->getTitre(); //$_POST['titre'];
+        $name = $item->getName(); //$_FILES['myfile']['name'];
+        $format = $item->getFormat(); //$_FILES['myfile']['type'];
+        $data = $item->getImage(); //file_get_contents($_FILES['myfile']['tmp_name']);
+        $catId = $item->getCat_id(); //$_POST['cat_id'];
+        $desc = $item->getDescription(); //$_POST['description'];
+        $prix = $item->getPrix(); //$_POST['prix'];
+        $quantite = $item->getQuantite(); //$_POST['quantite'];
+
+        $stmt = $bdd->prepare("INSERT INTO items_boutique VALUES('',?,?,?,?,?,?,?,?, SYSDATE());");
+        $stmt->bind_Param("sssbisdi", $titre, $name, $format, $data, $catId, $desc, $prix, $quantite);
+        $stmt->execute();
+        $bdd->close();
     }
-    return $listeBoutique;
-  }
+
+    public function modififierItemBoutique($item)
+    {
+    }
+
+    public function supprimerItemBoutique($id)
+    {
+        $bdd = $this->connexion();
+        $stmt = $bdd->prepare("delete from items_boutique where id_item = $id;");
+        $stmt->execute();
+        $bdd->close();
+    }
 }
