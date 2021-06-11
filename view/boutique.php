@@ -2,7 +2,7 @@
 include_once(__DIR__ . "/showHeader.php");
 include_once(__DIR__ . "/showNav.php");
 include_once(__DIR__ . "/showFooter.php");
-function boutique($listeBoutique)
+function boutique($listeBoutique, $csrfErrors = "")
 {
 ?>
   <!doctype html>
@@ -14,6 +14,11 @@ function boutique($listeBoutique)
 
   <body>
     <?php
+    if ($csrfErrors) {
+    ?>
+      <span>Une erreur est survenue (Code Erreur : CSRF)</span>
+    <?php
+    }
     navBoutique();
     listeBoutique($listeBoutique);
     ?>
@@ -71,8 +76,8 @@ function listeBoutique($listeBoutique)
           <button class="button-boutique-left" href="#"><?php echo $item->getPrix() ?> €</button>
           <button class="button-boutique-right" href=<?php echo $item->getId_item() ?>>Ajout Panier</button>
         </div>
-        <div class="button-admin">
-          <button class="button-modifier-item">Modifier</button>
+        <div id="ajout<?php echo $item->getId_item() ?>" class="button-admin">
+          <a href="modifierItem.php?id=<?php echo $item->getId_item() ?>"><button class="button-modifier-item">Modifier</button></a>
           <a href="ajoutOrSuppItem.php?id=<?php echo $item->getId_item() ?>"><button class='button-supp-item'>X</button></a>
         </div>
       </div>
@@ -83,7 +88,7 @@ function listeBoutique($listeBoutique)
 <?php
 }
 
-function ajoutItem()
+function ajoutItem($token)
 {
 ?>
   <!doctype html>
@@ -96,7 +101,8 @@ function ajoutItem()
   <body>
     <?php
     navBoutique();
-    htmlAjoutItem();
+
+    htmlAjoutItem($token);
     ?>
     <!-- <script src="../js/boutique.js"></script> -->
   </body>
@@ -105,7 +111,7 @@ function ajoutItem()
 <?php
 }
 
-function htmlAjoutItem()
+function htmlAjoutItem($token)
 {
 ?>
   <form class="form-ajout" method="post" enctype="multipart/form-data">
@@ -116,6 +122,46 @@ function htmlAjoutItem()
     <p>Description : <input type="text" name="description"></p>
     <p>Prix Unitaire : <input type="float" name="prix"> €</p>
     <p>Quantité : <input type="int" name="quantite"></p>
+    <input type="hidden" name="csrf_token" value="<?php echo $token ?>">
+    <input type="submit" name="btn" value="upload">
+  </form>
+<?php
+}
+
+function modifierItem($item)
+{
+?>
+  <!doctype html>
+  <html lang="en">
+  <?php
+  showHeader('../css/boutique.css');
+  showNav();
+  ?>
+
+  <body>
+    <?php
+    navBoutique();
+
+    htmlModifierItem($item);
+    ?>
+    <!-- <script src="../js/boutique.js"></script> -->
+  </body>
+
+  </html>
+<?php
+}
+
+function htmlModifierItem($item)
+{
+?>
+  <form class="form-ajout" method="post" enctype="multipart/form-data">
+    <input type="file" name="myfile" value="<?php $item->getName() ?>">
+    <p></p>
+    <p>Titre : <input type="text" name="titre" value="<?php $item->getTitre() ?>"></p>
+    <p>Catégorie : <input type="int" name="cat_id" value="<?php $item->getCat_Id() ?>"> / 1 => Jeux / 2 => Livres / 3 => Goodies /</p>
+    <p>Description : <input type="text" name="description" value="<?php $item->getDescription() ?>"></p>
+    <p>Prix Unitaire : <input type="float" name="prix" value="<?php $item->getPrix() ?>"> €</p>
+    <p>Quantité : <input type="int" name="quantite" value="<?php $item->getQuantite() ?>"></p>
     <input type="submit" name="btn" value="upload">
   </form>
 <?php

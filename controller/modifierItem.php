@@ -4,8 +4,6 @@ include_once(__DIR__ . "/../view/boutique.php");
 include_once(__DIR__ . "/../model/boutiqueModel.php");
 include_once(__DIR__ . "/../service/boutique.php");
 
-
-
 if ($_POST) {
     $itemBoutique = new BoutiqueService();
     $newImage = file_get_contents($_FILES['myfile']['tmp_name']);
@@ -19,20 +17,13 @@ if ($_POST) {
         ->setDescription($_POST['description'])
         ->setPrix($_POST['prix'])
         ->setQuantite($_POST['quantite']);
-    if ($_POST['csrf_token'] == $_SESSION['csrf_token']) {
-        $itemBoutique->ajoutItemBoutique($newItem);
-        header("Location: boutique.php");
-    } else {
-    }
+
+    $itemBoutique->ajoutItemBoutique($newItem);
+    header("Location: boutique.php");
 } else if ($_GET) {
     $itemBoutique = new BoutiqueService();
-    $token = bin2hex(random_bytes(20));
-    if ($token == $_SESSION['csrf_token']) {
-        $itemBoutique->supprimerItemBoutique($_GET['id']);
-        header("Location: boutique.php");
-    } else {
-        header("Location: boutique.php?csrfError=error");
-    }
+
+    $item = $itemBoutique->findById($_GET['id']);
+
+    htmlModifierItem($item);
 }
-$token = bin2hex(random_bytes(20));
-ajoutItem($token);

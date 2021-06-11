@@ -15,7 +15,11 @@ try {
     } catch (ServiceException $a) {
         echo $a;
     }
-    boutique($listeResult);
+    if ($_GET) {
+        boutique($listeResult, $_GET['csrfErrors']);
+    } else {
+        boutique($listeResult);
+    }
 } catch (Exception $e) {
     echo $e->getMessage();
 }

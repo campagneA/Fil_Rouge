@@ -25,6 +25,13 @@ class BoutiqueService
         return $listeResult;
     }
 
+    public function findById($id)
+    {
+        $item = new boutiqueDAO();
+        $itemResult = $item->findById($id);
+        return $itemResult;
+    }
+
     public function ajoutItemBoutique($item)
     {
         $ajoutBoutique = new BoutiqueDAO();
@@ -33,6 +40,8 @@ class BoutiqueService
 
     public function modififierItemBoutique($item)
     {
+        $ajoutBoutique = new BoutiqueDAO();
+        $ajoutBoutique->modififierItemBoutique($item);
     }
 
     public function supprimerItemBoutique($id)

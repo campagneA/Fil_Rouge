@@ -66,6 +66,17 @@ class BoutiqueDAO extends CommonDAO
         return $listeBoutique;
     }
 
+    public function findById($id)
+    {
+        $bdd = $this->connexion();
+        $stmt = $bdd->prepare("SELECT * from items_boutique WHERE id_item = $id;");
+        $rs = $stmt->get_result();
+        $data = $rs->fetch_all(MYSQLI_ASSOC);
+        $rs->free();
+        $bdd->close();
+        return $data;
+    }
+
     public function ajoutItemBoutique($item)
     {
         $bdd = $this->connexion();
@@ -79,19 +90,44 @@ class BoutiqueDAO extends CommonDAO
         $quantite = $item->getQuantite(); //$_POST['quantite'];
 
         $stmt = $bdd->prepare("INSERT INTO items_boutique VALUES('',?,?,?,?,?,?,?,?, SYSDATE());");
-        $stmt->bind_Param("sssbisdi", $titre, $name, $format, $data, $catId, $desc, $prix, $quantite);
+        $stmt->bind_Param("ssssisdi", $titre, $name, $format, $data, $catId, $desc, $prix, $quantite);
         $stmt->execute();
         $bdd->close();
     }
 
     public function modififierItemBoutique($item)
     {
+        $bdd = $this->connexion();
+        $id = $item->getId_item();
+        $titre = $item->getTitre(); //$_POST['titre'];
+        $name = $item->getName(); //$_FILES['myfile']['name'];
+        $format = $item->getFormat(); //$_FILES['myfile']['type'];
+        $data = $item->getImage(); //file_get_contents($_FILES['myfile']['tmp_name']);
+        $catId = $item->getCat_id(); //$_POST['cat_id'];
+        $desc = $item->getDescription(); //$_POST['description'];
+        $prix = $item->getPrix(); //$_POST['prix'];
+        $quantite = $item->getQuantite(); //$_POST['quantite'];
+
+        $stmt = $bdd->prepare(
+            "UPDATE items_boutique
+            SET titre = '$titre',
+            name = '$name',
+            format = '$format',
+            image = '$data',
+            cat_id = $catId,
+            description = '$desc',
+            prix = $prix,
+            quantite = $quantite
+            WHERE id_item = $id;"
+        );
+        $stmt->execute();
+        $bdd->close();
     }
 
     public function supprimerItemBoutique($id)
     {
         $bdd = $this->connexion();
-        $stmt = $bdd->prepare("delete from items_boutique where id_item = $id;");
+        $stmt = $bdd->prepare("DELETE FROM items_boutique WHERE id_item = $id;");
         $stmt->execute();
         $bdd->close();
     }
