@@ -23,4 +23,10 @@ class ForumServices extends CommonDAO
         $forumDao = new ForumDAO();
         return $forumDao->get_comments();
     }
+
+    public function get_comments_filtered(int $game_id)
+    {
+        $forumDao = new ForumDAO();
+        return $forumDao->get_comments_filtered($game_id);
+    }
 }

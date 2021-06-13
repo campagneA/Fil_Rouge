@@ -14,12 +14,12 @@ class ForumDAO extends CommonDAO
         $stmt = $conn->prepare($q);
         $val = [
             date("Y-m-d H:i:s"), 
-            $_POST['message'],
-            $_POST['subject'],
+            htmlentities($_POST['message']),
+            htmlentities($_POST['subject']),
             $_POST['game']
         ];
 
-        $stmt->bind_param('sssi', ...$val);
+        $stmt->bind_param('sssi', ...$val); // ... signifie de tout prendre en compte les valeurs séparement dans l'array
         $stmt->execute();
 
         $stmt->free_result();
@@ -51,6 +51,27 @@ class ForumDAO extends CommonDAO
         $conn->close();
 
         return $data;
+    }
+
+    public function get_comments_filtered(int $game_id) : array
+    {
+        $conn = $this->connexion();
+        $q = "SELECT * FROM ".$this->tbl." WHERE ";
+        $q .= "game = ? ORDER BY date_post DESC";
+        $stmt = $conn->stmt_init();
+        $stmt->prepare($q);
+        $stmt->bind_param('i', $game_id);
+        $stmt->execute();
+        $res = $stmt->get_result();
+        
+        if($res){
+            $arr = $res->fetch_all(MYSQLI_ASSOC);
+        }
+
+        $stmt->free_result();
+        $stmt->close();
+
+        return $arr;
     }
 }
 
