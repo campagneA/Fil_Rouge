@@ -9,15 +9,14 @@ function showProfil()
   <!doctype html>
   <html lang="en">
   <?php
-  showHeader();
+  showHeader("../css/profil.css");
   showNav();
   ?>
 
   <body>
-    <div class="page_profil">
-      <h3>Mon compte</h3>
-      <div class="cont_profil">
-        <nav id="nav_profil">
+    <div id="page_profil">
+      <div id="mcontainer">
+        <nav>
           <ul>
             <li id='profil_useri'><img src="../icones/utilisateur (1).svg" alt=""></li>
             <li id='profil_moneyi'><img src="../icones/carte-de-credit.svg" alt=""></li>
@@ -25,70 +24,124 @@ function showProfil()
             <li id='profil_parami'><img src="../icones/reglages (1).svg" alt=""></li>
           </ul>
         </nav>
-        <div class="profil_user_infos active">
-          <div class="fieldsets_container ">
-            <h6>Profil</h6>
-            <fieldset>
+
+
+        <div class="content_div active" id="infos">
+          <h6>Informations personnelles</h6>
+          <fieldset>
+            <div>
               <label for="nom">Nom</label>
               <input class="profil_input" type="text" name="nom" autocomplete="off" title="nom">
+              <label for="nom" class="error_msg" id="nom">Nom</label>
+            </div>
+            <div>
+              <label for="nom"></label>
               <label for="prenom">prenom</label>
               <input class="profil_input" type="text" name="prenom" autocomplete="off">
+              <label for="prenom" class="error_msg" id="prenom">prenom</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div>
               <label for="email">email</label>
               <input class="profil_input" type="email" name="mail" autocomplete="off">
+              <label for="email" class="error_msg" id="email_msg">ee</label>
+            </div>
+            <div>
               <label for="mail_secours">email secondaire</label>
               <input class="profil_input" type="email" name="mail_secours" autocomplete="off">
+              <label for="mail_secours" class="error_msg " id="mail_secours">email secondaire</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div>
               <label for="tel">telephone</label>
               <input class="profil_input" type="tel" name="tel" autocomplete="off">
+              <label for="tel" class="error_msg">telephone</label>
+            </div>
+            <div>
               <label for="date_naissance">date de naissance</label>
               <input class="profil_input" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="date_naissance" autocomplete="off">
-            </fieldset>
-            <label for="adresse_fieldset" id="adresse_label">Adresse</label>
-            <fieldset id='adresse_fieldset'>
-              <label for="adresse">rue</label>
+              <label for="date_naissance" class="error_msg">date de naissance</label>
+            </div>
+          </fieldset>
+
+          <fieldset id='adresse_fieldset'>
+
+            <div>
+              <label for="rue">rue</label>
               <input class="profil_input" type="text" name="rue" autocomplete="off">
-              <label for="adresse">ville</label>
+              <label for="rue" class="error_msg">rue</label>
+            </div>
+            <div>
+              <label for="ville">ville</label>
               <input class="profil_input" type="text" name="ville" autocomplete="off">
-            </fieldset>
-
-
-            <!-- <label for="date_naissance">date de naissance</label> -->
-
-          </div>
+              <label for="ville" class="error_msg">ville</label>
+            </div>
+          </fieldset>
         </div>
-        <div class="profil_money_infos fieldsets_container ">
+        <!-- <div class="content_div">je suis</div>
+        <div class="content_div">sono</div> -->
+        <div class="content_div active" id="money">
           <h6>Informations de paiement</h6>
           <fieldset>
-            <input class="profil_input" type="text" name="adr_livraison" autocomplete="off">
-            <input class="profil_input" type="text" name="adr_facturation" autocomplete="off">
-            <input class="profil_input" type="tel" name="carte_credit" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19">
+            <div>
+              <label for="nom">Nom</label>
+              <input class="profil_input" type="text" name="nom" autocomplete="off" title="nom">
+              <label for="nom" class="error_msg" id="nom">Nom</label>
+            </div>
+            <div>
+              <label for="nom"></label>
+              <label for="prenom">prenom</label>
+              <input class="profil_input" type="text" name="prenom" autocomplete="off">
+              <label for="prenom" class="error_msg" id="prenom">prenom</label>
+            </div>
           </fieldset>
           <fieldset>
-            <button>Historique des commandes</button>
-            <button>Commandes en cours</button>
+            <div>
+              <label for="email">email</label>
+              <input class="profil_input" type="email" name="mail" autocomplete="off">
+              <label for="email" class="error_msg" id="email_msg">ee</label>
+            </div>
+            <div>
+              <label for="mail_secours">email secondaire</label>
+              <input class="profil_input" type="email" name="mail_secours" autocomplete="off">
+              <label for="mail_secours" class="error_msg " id="mail_secours">email secondaire</label>
+            </div>
           </fieldset>
-        </div>
-        <div class="profil_msg_config fieldsets_container ">
-          <h6>Forum</h6>
           <fieldset>
-            <input class="profil_input" type="text" name="pseudo" autocomplete="off">
-            <input class="checkbox" type="checkbox" value="true" name="notifs_forum" autocomplete="off">recevoir des notifications du forum</input>
-
-            <label for="about_me">à propos de vous</label>
-            <textarea class="profil_input" name="about_me" id="" cols="30" rows="10"></textarea>
+            <div>
+              <label for="tel">telephone</label>
+              <input class="profil_input" type="tel" name="tel" autocomplete="off">
+              <label for="tel" class="error_msg">telephone</label>
+            </div>
+            <div>
+              <label for="date_naissance">date de naissance</label>
+              <input class="profil_input" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="date_naissance" autocomplete="off">
+              <label for="date_naissance" class="error_msg">date de naissance</label>
+            </div>
           </fieldset>
-        </div>
-        <div class="profil_param_compte fieldsets_container ">
 
-          <input class="checkbox" type="checkbox" value="true" name="annonces_commerciales" autocomplete="off">vous consentez à recevoir des offres commerciales de nous ou nos partenaires</input>
+          <fieldset id='adresse_fieldset'>
 
+            <div>
+              <label for="rue">rue</label>
+              <input class="profil_input" type="text" name="rue" autocomplete="off">
+              <label for="rue" class="error_msg">rue</label>
+            </div>
+            <div>
+              <label for="ville">ville</label>
+              <input class="profil_input" type="text" name="ville" autocomplete="off">
+              <label for="ville" class="error_msg">ville</label>
+            </div>
+          </fieldset>
         </div>
       </div>
-    </div>
-    <?php
-    showFooter();
-    ?>
-    <script src="../js/jquery-3.6.0.js"></script>
-    <script src="../js/profil.js"></script>
+      <?php
+      showFooter();
+      ?>
+      <script src="../js/jquery-3.6.0.js"></script>
+      <script src="../js/profil.js"></script>
   </body>
 
   </html>

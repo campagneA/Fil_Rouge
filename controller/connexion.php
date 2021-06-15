@@ -2,11 +2,16 @@
 session_start();
 include_once(__DIR__ . '/../view/showConnexion.php');
 include_once(__DIR__ . '/../model/userModel.php');
-showConnexion();
 
 if (isset($_POST['connexion'])) {
-  $pseudo = $_POST['pseudoPHP'];
-  $mdp = $_POST['mdpPHP'];
+  $csrf_token = $_POST['csrf_token'];
+  echo $_SESSION['csrf_token'] . "<br>";
+  echo $csrf_token;
+  if ($csrf_token !== $_SESSION['csrf_token']) {
+    exit;
+  }
+  $pseudo = htmlspecialchars($_POST['pseudoPHP']);
+  $mdp = htmlspecialchars($_POST['mdpPHP']);
 
   $host = 'localhost';
   $user = 'root';
@@ -28,8 +33,7 @@ if (isset($_POST['connexion'])) {
       $_SESSION['id_user'] = $infos['id_user'];
       $_SESSION['pseudo'] = $pseudo;
       $_SESSION['role'] = $infos['role'];
-      print_r($_SESSION);
-
+      header("Location: acceuil.php");
       exit;
     } else {
       exit('mauvais mdp');
@@ -37,4 +41,9 @@ if (isset($_POST['connexion'])) {
   } else {
     exit('pseudo inconnu');
   }
+} else {
+  $binary = random_bytes(10);
+  $token = bin2hex($binary);
+  $_SESSION['csrf_token'] = $token;
+  showConnexion($_SESSION['csrf_token']);
 }
