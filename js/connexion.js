@@ -1,5 +1,14 @@
 $(document).ready(() => {
-  $('#login_btn').click(() => {
+  $('#login_btn').click(() => connection());
+  $('#pseudo')
+    .add('#mdp')
+    .keyup((e) => {
+      if (e.keyCode === 13) {
+        connection();
+      }
+    });
+
+  function connection() {
     const pseudo = $('#pseudo').val();
     const mdp = $('#mdp').val();
     const csrf_token = $('#csrf_token').val();
@@ -16,15 +25,16 @@ $(document).ready(() => {
           connexion: 1,
           pseudoPHP: pseudo,
           mdpPHP: mdp,
-          csrf_token: csrf_token
+          csrf_token: csrf_token,
         },
         success: (response) => {
-          window.history.back();
-          // window.location.replace('acceuil.php');
-          console.log('Response:' + response);
+          document.referrer == ''
+            ? window.history.replace('acceuil.php')
+            : window.history.back();
+          // console.log('Response:' + response);
         },
         dataType: 'text',
       });
     }
-  });
+  }
 });

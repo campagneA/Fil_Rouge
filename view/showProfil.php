@@ -16,7 +16,7 @@ function showProfil()
   <body>
     <div id="page_profil">
       <div id="mcontainer">
-        <nav>
+        <nav id="nav_profil">
           <ul>
             <li id='profil_useri'><img src="../icones/utilisateur (1).svg" alt=""></li>
             <li id='profil_moneyi'><img src="../icones/carte-de-credit.svg" alt=""></li>

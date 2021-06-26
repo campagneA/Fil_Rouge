@@ -20,25 +20,25 @@
   display: grid;
   grid-template-columns: 4fr 1fr 15fr;
 }
-nav {
+#nav_profil {
   grid-column: 1/2;
   padding: 150px 60px;
 }
-nav ul {
+#nav_profil ul {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
 }
-nav ul li {
+#nav_profil ul li {
   list-style: none;
   padding: 30px 0;
 }
-nav ul li:hover {
+#nav_profil ul li:hover {
   color: rgb(204, 204, 218);
   cursor: pointer;
 }
-nav ul li img {
+#nav_profil ul li img {
   width: 2vw;
   transition: 0.5s ease;
   border: 1px solid white;

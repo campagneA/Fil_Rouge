@@ -8,7 +8,7 @@ if (isset($_POST['connexion'])) {
   echo $_SESSION['csrf_token'] . "<br>";
   echo $csrf_token;
   if ($csrf_token !== $_SESSION['csrf_token']) {
-    exit;
+    exit();
   }
   $pseudo = htmlspecialchars($_POST['pseudoPHP']);
   $mdp = htmlspecialchars($_POST['mdpPHP']);
@@ -34,7 +34,6 @@ if (isset($_POST['connexion'])) {
       $_SESSION['pseudo'] = $pseudo;
       $_SESSION['role'] = $infos['role'];
       header("Location: acceuil.php");
-      exit;
     } else {
       exit('mauvais mdp');
     }
